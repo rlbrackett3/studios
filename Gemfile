@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-# gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', github: 'rails/rails', branch: '4-0-stable'
+# gem 'rails', '4.0.0.rc1'
 
 gem "carrierwave"
 gem "carrierwave-mongoid", require: "carrierwave/mongoid"
@@ -22,14 +22,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
-group :assets do
+# group :assets do
   gem 'sprockets-rails', github: 'rails/sprockets-rails'
   gem 'sass-rails',   github: 'rails/sass-rails'
   gem 'coffee-rails', github: 'rails/coffee-rails'
   gem "uglifier"
-  gem 'compass-rails'
-  gem 'susy'
-end
+  gem 'bourbon'
+  gem 'neat'
+# end
 
 group :development, :test do
   gem "fabrication"
