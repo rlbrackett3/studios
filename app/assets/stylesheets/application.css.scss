@@ -1,9 +1,16 @@
-@import "bourbon";
-@import "grid-settings";
-@import "neat";
+// @import "bourbon";
+// @import "grid-settings";
+// @import "neat";
+
+@import "compass";
+@import "susy";
 
 @import "home";
 
+// .container {
+//   @include outer-container;
+// }
+
 .container {
-  @include outer-container;
+  @include container;
 }

@@ -6,7 +6,9 @@ gem 'rails', github: 'rails/rails', branch: '4-0-stable'
 
 gem "carrierwave"
 gem "carrierwave-mongoid", require: "carrierwave/mongoid"
+
 gem "decent_exposure"
+gem 'simple_form'
 
 gem "mongoid", github: "mongoid/mongoid"
 
@@ -22,20 +24,29 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.0.1'
 
-# group :assets do
-  gem 'sprockets-rails', github: 'rails/sprockets-rails'
-  gem 'sass-rails',   github: 'rails/sass-rails'
-  gem 'coffee-rails', github: 'rails/coffee-rails'
-  gem "uglifier"
-  gem 'bourbon'
-  gem 'neat'
-# end
+# Assets
+gem 'sprockets-rails', github: 'rails/sprockets-rails'
+gem 'sass-rails',   github: 'rails/sass-rails'
+gem 'coffee-rails', github: 'rails/coffee-rails'
+gem "uglifier"
+# gem 'bourbon'
+# gem 'neat'
+gem 'compass-rails', github: 'milgner/compass-rails', branch: 'rails4'
+gem 'susy'
+
+group :development do
+  gem 'guard-livereload'
+end
 
 group :development, :test do
   gem "fabrication"
-  gem "guard-rspec"
-  gem "rspec-rails"
-  gem "spork", "~> 0.9.0.rc"
+  # gem "guard-rspec"
+  # gem "rspec-rails"
+  gem 'minitest-rails'
+  gem "minitest-rails-capybara"
+  gem 'guard-minitest', github: 'guard/guard-minitest'
+  gem "spork-rails", github: "koriroys/spork-rails"
+  gem "spork-testunit"
 end
 
 group :doc do
