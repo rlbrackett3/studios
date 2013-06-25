@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/guard/guard-minitest.git
-  revision: e9864dc85e6f52844afded8d93b9881b5e14f6f7
+  revision: f13d0ec2a59cd11d1b400f2db62445c6092ee112
   specs:
-    guard-minitest (1.0.0.beta.2)
+    guard-minitest (1.0.0.rc.3)
       guard (>= 1.8)
       minitest (>= 2.1)
 
@@ -24,10 +24,10 @@ GIT
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 11e45e5a30a45458b83db99ab6c9d9ccc337e66f
+  revision: e1b32e598ec231cc7a7e191fd0432e4cd4910447
   specs:
     mongoid (4.0.0)
-      activemodel (~> 4.0.0.rc1)
+      activemodel (~> 4.0.0.rc2)
       moped (~> 1.4)
       origin (~> 1.0)
       tzinfo (~> 0.3.22)
@@ -52,55 +52,13 @@ GIT
       railties (>= 4.0.0.beta, < 5.0)
 
 GIT
-  remote: git://github.com/rails/rails.git
-  revision: 56b50af4a6aab74688d09a63483d75bcaf745716
-  branch: 4-0-stable
-  specs:
-    actionmailer (4.0.0.rc1)
-      actionpack (= 4.0.0.rc1)
-      mail (~> 2.5.4)
-    actionpack (4.0.0.rc1)
-      activesupport (= 4.0.0.rc1)
-      builder (~> 3.1.0)
-      erubis (~> 2.7.0)
-      rack (~> 1.5.2)
-      rack-test (~> 0.6.2)
-    activemodel (4.0.0.rc1)
-      activesupport (= 4.0.0.rc1)
-      builder (~> 3.1.0)
-    activerecord (4.0.0.rc1)
-      activemodel (= 4.0.0.rc1)
-      activerecord-deprecated_finders (~> 1.0.2)
-      activesupport (= 4.0.0.rc1)
-      arel (~> 4.0.0)
-    activesupport (4.0.0.rc1)
-      i18n (~> 0.6, >= 0.6.4)
-      minitest (~> 4.2)
-      multi_json (~> 1.3)
-      thread_safe (~> 0.1)
-      tzinfo (~> 0.3.37)
-    rails (4.0.0.rc1)
-      actionmailer (= 4.0.0.rc1)
-      actionpack (= 4.0.0.rc1)
-      activerecord (= 4.0.0.rc1)
-      activesupport (= 4.0.0.rc1)
-      bundler (>= 1.3.0, < 2.0)
-      railties (= 4.0.0.rc1)
-      sprockets-rails (~> 2.0.0)
-    railties (4.0.0.rc1)
-      actionpack (= 4.0.0.rc1)
-      activesupport (= 4.0.0.rc1)
-      rake (>= 0.8.7)
-      thor (>= 0.18.1, < 2.0)
-
-GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: 33799418f104c961b1ce41452e77cf1e04930755
+  revision: 6b8e7c547220d361d6784f4c4decb82a101de7a5
   specs:
-    sass-rails (4.0.0.rc1)
+    sass-rails (4.0.0.rc2)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0.rc4)
+      sprockets-rails (~> 2.0.0)
 
 GIT
   remote: git://github.com/rails/sprockets-rails.git
@@ -111,10 +69,42 @@ GIT
       activesupport (>= 3.0)
       sprockets (~> 2.8)
 
+GIT
+  remote: git://github.com/scambra/devise_invitable.git
+  revision: 506c4bbc18bfa5461d79f77d4b272a0b47be3a23
+  branch: rails4
+  specs:
+    devise_invitable (1.2.0.rc1)
+      actionmailer (>= 4.0.0.rc1)
+      railties (>= 4.0.0.rc1)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    actionmailer (4.0.0.rc2)
+      actionpack (= 4.0.0.rc2)
+      mail (~> 2.5.3)
+    actionpack (4.0.0.rc2)
+      activesupport (= 4.0.0.rc2)
+      builder (~> 3.1.0)
+      erubis (~> 2.7.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    activemodel (4.0.0.rc2)
+      activesupport (= 4.0.0.rc2)
+      builder (~> 3.1.0)
+    activerecord (4.0.0.rc2)
+      activemodel (= 4.0.0.rc2)
+      activerecord-deprecated_finders (~> 1.0.2)
+      activesupport (= 4.0.0.rc2)
+      arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
+    activesupport (4.0.0.rc2)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.9)
     bcrypt-ruby (3.0.1)
@@ -150,10 +140,10 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fabrication (2.7.2)
-    ffi (1.8.1)
+    ffi (1.9.0)
     formatador (0.2.4)
     fssm (0.2.10)
-    guard (1.8.0)
+    guard (1.8.1)
       formatador (>= 0.2.4)
       listen (>= 1.0.0)
       lumberjack (>= 1.0.2)
@@ -175,11 +165,11 @@ GEM
     i18n (0.6.4)
     jbuilder (1.0.2)
       activesupport (>= 3.0.0)
-    jquery-rails (3.0.0)
+    jquery-rails (3.0.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
-    listen (1.1.6)
+    listen (1.2.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
@@ -189,7 +179,8 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.23)
-    minitest (4.7.4)
+    mini_portile (0.5.0)
+    minitest (4.7.5)
     minitest-capybara (0.1.0)
       capybara (>= 1.0)
       minitest-matchers (>= 1.2)
@@ -207,8 +198,9 @@ GEM
       minitest-metadata (~> 0.3)
       minitest-rails (~> 0.9.1)
     moped (1.5.0)
-    multi_json (1.7.6)
-    nokogiri (1.5.9)
+    multi_json (1.7.7)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     origin (1.1.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
@@ -216,12 +208,25 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
-    puma (2.0.1)
+    puma (2.1.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.0.4)
+    rails (4.0.0.rc2)
+      actionmailer (= 4.0.0.rc2)
+      actionpack (= 4.0.0.rc2)
+      activerecord (= 4.0.0.rc2)
+      activesupport (= 4.0.0.rc2)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.0.0.rc2)
+      sprockets-rails (~> 2.0.0)
+    railties (4.0.0.rc2)
+      actionpack (= 4.0.0.rc2)
+      activesupport (= 4.0.0.rc2)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
+    rake (10.1.0)
     rb-fsevent (0.9.3)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
@@ -243,7 +248,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    susy (1.0.8)
+    susy (1.0.9)
       compass (>= 0.12.2)
       sass (>= 3.2.0)
     thor (0.18.1)
@@ -274,6 +279,7 @@ DEPENDENCIES
   compass-rails!
   decent_exposure
   devise!
+  devise_invitable!
   fabrication
   guard-livereload
   guard-minitest!
@@ -284,7 +290,7 @@ DEPENDENCIES
   minitest-rails-capybara
   mongoid!
   puma
-  rails!
+  rails (= 4.0.0.rc2)
   sass-rails!
   sdoc
   simple_form

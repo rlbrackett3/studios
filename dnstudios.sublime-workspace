@@ -1,0 +1,593 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"gra",
+				"gray-lighter"
+			],
+			[
+				"blank",
+				"blankInsertCount"
+			],
+			[
+				"grid",
+				"grid-object"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"rand",
+				"randNum"
+			],
+			[
+				"yellow",
+				"yellowSquare"
+			],
+			[
+				"main",
+				"main-grid"
+			],
+			[
+				"blue",
+				"blueSquare"
+			],
+			[
+				"gray",
+				"gray-lighter"
+			],
+			[
+				"link-",
+				"link-hover"
+			],
+			[
+				"must",
+				"must_equal"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"judyanne",
+				"judyannepayawal"
+			],
+			[
+				"me",
+				"mediumGrey"
+			],
+			[
+				"eas",
+				"ease-in-out"
+			],
+			[
+				"Br",
+				"BrandonGrotesque-Bold"
+			],
+			[
+				"text-",
+				"text-shadow"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"slideshow",
+				"slideshow-nav"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/layouts/application.html.haml",
+			"settings":
+			{
+				"buffer_size": 272,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1367,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 52.0,
+		"selected_items":
+		[
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"tid",
+				"Tidy HTML"
+			],
+			[
+				"tidy",
+				"Tidy HTML"
+			],
+			[
+				"Package Control: inst	",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"guar",
+				"Guard: Start Guard"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/robert/Dropbox/Sites/ruby2/studios/.ruby-version",
+		"/home/robert/Dropbox/Sites/ruby2/studios/.ruby-gemset",
+		"/home/robert/Dropbox/Sites/ruby2/studios/test/test_helper.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/Guardfile",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/application.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/application.css.scss",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/_grid-settings.scss",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/compass.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/environments/development.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/home.css.scss",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/layouts/application.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/layouts/application.html.erb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/.rspec",
+		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/Guardfile",
+		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/environments/production.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/environments/production.rb",
+		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/environments/development.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/routes.rb",
+		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/mongoid.yml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/mongoid.yml",
+		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/application.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/Gemfile",
+		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/Gemfile",
+		"/home/robert/Dropbox/Sites/ruby2/rails4test/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/about.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/public/javascripts/home.js",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/projects/content_type_template.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/awards-publications.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/404.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/footer_stamp.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/header_page.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/projects.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/images.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/exhibitions.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/publications.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/awards.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/config/deploy.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/config/site.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/environments/production.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dbmb-editor/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/mp-editor/app/views/snippets/sidebar_nav.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/home_scripts.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/projects.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/categories.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/categories.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/mp-editor/app/views/pages/index.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/mp-editor/app/views/pages/projects_index.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/mp-editor/app/views/pages/projects.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/images.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/projects.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/awards & publications.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/details.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/publications.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/exhibitions.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/public/javascripts/main.js.coffee",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/awards.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/about.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/views/pages/posts/content_type_template.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/awards2.liquid.html",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/initializers/locomotive.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/details.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/public/stylesheets/susy/susy/_settings.scss",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/awards-and-publications.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/header_index.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/mp-editor/public/stylesheets/main.css.scss",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/publications.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/exhibitions.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/awards.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/company_details.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/config/site.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/company_details.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/content_types/posts.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/content_types/photos.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/views/pages/index.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/public/stylesheets/main.css.scss",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/public/stylesheets/bootstrap.min.css",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/locomotivecms_install.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/.cred",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/.gitignore",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/routes.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/environments/development.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/environments/development.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/environments/production.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/initializers/locomotive.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/application.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/application.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/mongoid.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dbmb/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/content_types/responses.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/content_types/videos.yml",
+		"/home/robert/Dropbox/Sites/dn/app/views/layouts/_footer.html.haml",
+		"/home/robert/Dropbox/Sites/dn/app/views/layouts/_head.html.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog-editor/config/deploy.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/Guardfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/views/pages/posts.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/views/pages/about.liquid.haml",
+		"/home/robert/Dropbox/Sites/dn/app/views/layouts/_nav.html.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/Gemfile.lock",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/data/videos.yml",
+		"/home/robert/Dropbox/Sites/dn/app/assets/stylesheets/02_master.css.sass.erb",
+		"/home/robert/Dropbox/Sites/dn/app/assets/stylesheets/03_admin.css.sass.erb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog-editor/app/views/pages/posts.liquid.haml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/data/photos.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/jap-editor/data/slideshow_images.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/config/deploy.yml",
+		"/home/robert/Dropbox/Sites/spreetest/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/environments/development.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/environments/production.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/application.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/environment.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/routes.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/mongoid.yml",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/initializers/locomotive.rb",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/.rvmrc",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/nourish/Gemfile",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/.rvmrc",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/loco-push",
+		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/Gemfile",
+		"/home/robert/Dropbox/Sites/mpprojects/app/views/next_actions/_form.html.haml",
+		"/home/robert/Dropbox/Sites/mpprojects/app/views/next_actions/edit.html.haml",
+		"/home/robert/Dropbox/Sites/mpprojects/app/views/next_actions/new.html.haml",
+		"/home/robert/Dropbox/Sites/ffflourish/app/controllers/users_controller.rb",
+		"/home/robert/Dropbox/Sites/mpprojects/test/factories/projects.rb",
+		"/home/robert/Dropbox/Sites/mpprojects/test/factories/users.rb",
+		"/home/robert/Dropbox/Sites/mpprojects/app/models/next_action.rb"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"project",
+			"item",
+			"Item #",
+			"credit:",
+			"show(100)",
+			"awards",
+			"award",
+			"awards",
+			"caption",
+			"image",
+			"photo",
+			"li",
+			"0bject",
+			"company_",
+			"projects",
+			"h4",
+			"grid",
+			"%li",
+			"%a",
+			"award",
+			"pub",
+			"publications",
+			"Publications",
+			"publications",
+			"subtitle",
+			"award",
+			"awards",
+			"Awards",
+			"awards",
+			"Awards",
+			"awards",
+			"subtitle",
+			"caption",
+			"project-1",
+			"Project 1",
+			"project-1",
+			"Project 1",
+			"project-1",
+			"Project 1",
+			"item",
+			"-1",
+			"false",
+			"Item",
+			"item",
+			"Item",
+			"item",
+			"Item",
+			"item",
+			"false",
+			"dnblogs",
+			"<YOUR HEROKU API KEY>",
+			"staging",
+			"= link_to",
+			"nav_link",
+			"post_",
+			"image",
+			"bold",
+			"locomotive",
+			"lcblog",
+			"admin",
+			"do",
+			"teardown",
+			"setup",
+			"delete",
+			"belong_to",
+			"should",
+			"p",
+			"project",
+			"Project",
+			"project",
+			"action.",
+			"Action.",
+			"action.",
+			"Action.",
+			"action.",
+			"Action.",
+			"action",
+			"Action",
+			"action",
+			"Action",
+			"action",
+			"Action",
+			"action",
+			"actions",
+			"app",
+			"attr_accessible",
+			"rvm",
+			"resource_name",
+			"'\n",
+			"=> ",
+			"projektor",
+			"name",
+			"Item #",
+			"Item #1",
+			"item",
+			"Item #",
+			"2",
+			"Item #2",
+			"Item #",
+			" =>",
+			"full",
+			"event",
+			"item",
+			"Item #",
+			"title/",
+			"title",
+			"////////////////////////////////////////////",
+			"* ",
+			"full",
+			"-",
+			"Certification",
+			"\n-Certification",
+			"-",
+			"true",
+			"offering",
+			"'''\n",
+			"png'''",
+			"''",
+			"samples",
+			" '''/",
+			"''",
+			"item",
+			"Item #",
+			"yourfile",
+			"title",
+			"ul",
+			"www/",
+			"item"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/layouts/application.html.haml",
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								245,
+								245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.466298806628,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 168.0,
+	"status_bar_visible": true
+}

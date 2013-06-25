@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'rails', github: 'rails/rails', branch: '4-0-stable'
-# gem 'rails', '4.0.0.rc1'
+# gem 'rails', github: 'rails/rails', branch: '4-0-stable'
+gem 'rails', '4.0.0.rc2'
 
 gem "carrierwave"
 gem "carrierwave-mongoid", require: "carrierwave/mongoid"
@@ -13,6 +13,7 @@ gem 'simple_form'
 gem "mongoid", github: "mongoid/mongoid"
 
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
+gem 'devise_invitable', github: 'scambra/devise_invitable', branch: 'rails4'
 
 gem 'jquery-rails'
 gem 'haml-rails'
