@@ -1,0 +1,2 @@
+Fabricator(:profile) do
+end

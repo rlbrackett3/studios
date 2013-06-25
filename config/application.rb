@@ -41,10 +41,10 @@ module Studios
 
     config.generators do |g|
       g.fixture_replacement :fabrication
-      g.orm             :mongoid
-      g.test_framework :mini_test, :spec => true, :fixture => false
-      g.template_engine :haml
-      g.stylesheet_engine = :scss
+      g.orm                 :mongoid
+      g.test_framework      :mini_test, spec:true, fixture: false
+      g.template_engine     :haml
+      g.stylesheet_engine   :scss
     end
   end
 end

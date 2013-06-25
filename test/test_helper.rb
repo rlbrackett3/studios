@@ -30,7 +30,9 @@ Spork.each_run do
     # fixtures :all
 
     # Add more helper methods to be used by all tests here...
-
+    #  before :each do
+    #   Mongoid.purge!
+    # end
   end
 
 end
