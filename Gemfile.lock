@@ -1,20 +1,4 @@
 GIT
-  remote: git://github.com/guard/guard-minitest.git
-  revision: f13d0ec2a59cd11d1b400f2db62445c6092ee112
-  specs:
-    guard-minitest (1.0.0.rc.3)
-      guard (>= 1.8)
-      minitest (>= 2.1)
-
-GIT
-  remote: git://github.com/koriroys/spork-rails.git
-  revision: 355a354e9de328e86a9f3fe306f243745950a7d1
-  specs:
-    spork-rails (3.2.1)
-      rails (>= 3.0.0)
-      spork (>= 1.0rc0)
-
-GIT
   remote: git://github.com/milgner/compass-rails.git
   revision: 1749c06f15dc4b058427e7969810457213647fb8
   branch: rails4
@@ -70,6 +54,13 @@ GIT
       sprockets (~> 2.8)
 
 GIT
+  remote: git://github.com/railstutorial/spork-rails.git
+  revision: 5db525af2f917047057f546bc1ac2574d1c6b11e
+  specs:
+    spork-rails (3.2.1)
+      spork (>= 1.0rc0)
+
+GIT
   remote: git://github.com/scambra/devise_invitable.git
   revision: 506c4bbc18bfa5461d79f77d4b272a0b47be3a23
   branch: rails4
@@ -121,6 +112,8 @@ GEM
     carrierwave-mongoid (0.1.0)
       carrierwave
       mongoid
+    childprocess (0.3.9)
+      ffi (~> 1.0, >= 1.0.11)
     chunky_png (1.2.8)
     coderay (1.0.9)
     coffee-script (2.2.0)
@@ -153,6 +146,13 @@ GEM
       em-websocket (>= 0.5.0)
       guard (>= 1.8.0)
       multi_json (~> 1.7)
+    guard-minitest (1.0.0.rc.3)
+      guard (>= 1.8)
+      minitest (>= 2.1)
+    guard-spork (1.5.1)
+      childprocess (>= 0.2.3)
+      guard (>= 1.1)
+      spork (>= 0.8.4)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -241,8 +241,8 @@ GEM
     simple_form (1.4.1)
     slop (3.4.5)
     spork (1.0.0rc3)
-    spork-testunit (0.0.8)
-      spork (>= 0.6.0)
+    spork-minitest (1.0.0.beta2)
+      spork
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -282,7 +282,8 @@ DEPENDENCIES
   devise_invitable!
   fabrication
   guard-livereload
-  guard-minitest!
+  guard-minitest (~> 1.0.0.rc.3)
+  guard-spork
   haml-rails
   jbuilder (~> 1.0.1)
   jquery-rails
@@ -294,8 +295,8 @@ DEPENDENCIES
   sass-rails!
   sdoc
   simple_form
+  spork-minitest (~> 1.0.0.beta1)
   spork-rails!
-  spork-testunit
   sprockets-rails!
   susy
   turbolinks

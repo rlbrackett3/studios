@@ -45,9 +45,13 @@ group :development, :test do
   # gem "rspec-rails"
   gem 'minitest-rails'
   gem "minitest-rails-capybara"
-  gem 'guard-minitest', github: 'guard/guard-minitest'
-  gem "spork-rails", github: "koriroys/spork-rails"
-  gem "spork-testunit"
+  # gem 'guard-minitest', github: 'guard/guard-minitest'
+  gem 'guard-minitest', "~> 1.0.0.rc.3"
+
+  gem 'guard-spork'
+  # gem "spork-rails", github: "koriroys/spork-rails"
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
+  gem "spork-minitest", "~> 1.0.0.beta1"
 end
 
 group :doc do
