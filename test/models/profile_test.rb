@@ -29,4 +29,13 @@ describe Profile do
     @profile.must_respond_to :bio
   end
 
+  # associations
+  it "must respond to user" do
+    @profile.must_respond_to :user
+  end
+
+  it "must respond to websites" do
+    @profile.must_respond_to :websites
+  end
+
 end

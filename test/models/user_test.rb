@@ -14,4 +14,9 @@ describe User do
     @user.password = "foobar123"
     @user.valid?.must_equal true
   end
+
+  # associations
+  it "must respond to profile" do
+    @user.must_respond_to :profile
+  end
 end

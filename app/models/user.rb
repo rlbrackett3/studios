@@ -48,4 +48,7 @@ class User
   index( {invitation_token: 1}, {:background => true} )
   index( {invitation_by_id: 1}, {:background => true} )
 
+  # Associations
+  embeds_one :profile
+
 end
