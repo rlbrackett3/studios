@@ -15,6 +15,10 @@ describe User do
     @user.valid?.must_equal true
   end
 
+  it "must respond to active boolean attr" do
+    @user.must_respond_to :active
+  end
+
   # associations
   it "must respond to profile" do
     @user.must_respond_to :profile
