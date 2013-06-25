@@ -48,6 +48,8 @@ class User
   index( {invitation_token: 1}, {:background => true} )
   index( {invitation_by_id: 1}, {:background => true} )
 
+  field :active, type: Boolean, default: true
+
   # Associations
   embeds_one :profile
 

@@ -1,0 +1,2 @@
+Fabricator(:website) do
+end
