@@ -1,0 +1,6 @@
+- if @user.full_name.size > 1
+  %h1= @user.full_name
+- else
+  %h1= @user.email
+- if @user == current_user
+  = link_to "change your password", edit_user_registration_path

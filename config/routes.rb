@@ -1,7 +1,13 @@
 Studios::Application.routes.draw do
-  resources :profiles
 
+  get "users/index"
+  get "users/show"
   devise_for :users
+
+  resources :users do
+    resource :profile, :only => [:show, :edit, :update]
+  end
+
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

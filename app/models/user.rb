@@ -3,8 +3,8 @@ class User
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
-   # :registerable,
-  devise :invitable, :database_authenticatable,
+   # ,
+  devise :invitable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   ## Database authenticatable
@@ -52,5 +52,21 @@ class User
 
   # Associations
   embeds_one :profile
+
+  # Callbacks
+  after_create  :setup_profile
+
+
+  def full_name
+    [self.profile.fname, self.profile.lname].join(' ')
+  end
+
+  protected
+
+  def setup_profile
+    self.profile = Profile.new()
+    # code to instatiate websites
+    self.save
+  end
 
 end

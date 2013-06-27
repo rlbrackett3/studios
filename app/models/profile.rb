@@ -8,7 +8,7 @@ class Profile
   field :bio,   type: String
 
   field :tel,   type: Integer
-  field :uid,   type: String, default: ''
+  field :school_id,   type: String, default: ''
 
   # Associations
   embedded_in :user

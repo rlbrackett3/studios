@@ -8,4 +8,17 @@
     = csrf_meta_tags
   %body
     .container
-      = yield
+
+      - if flash[:notice] || flash[:alert]
+        .alert.trasparent
+          = flash[:notice] || flash[:alert]
+
+      %header
+        %nav
+          - if user_signed_in?
+            = link_to "logout", destroy_user_session_path, :method => :delete
+          - else
+            = link_to "login", new_user_session_path
+
+      #main
+        = yield

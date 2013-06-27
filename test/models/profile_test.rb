@@ -22,7 +22,7 @@ describe Profile do
   end
 
   it "must respond to a uid attr" do
-    @profile.must_respond_to :uid
+    @profile.must_respond_to :school_id
   end
 
   it "must respond to a bio attr" do

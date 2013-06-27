@@ -1,8 +1,14 @@
 require "test_helper"
 
 describe User do
+
   before do
+    DatabaseCleaner.start
     @user = User.new
+  end
+
+  after do
+    DatabaseCleaner.clean
   end
 
   it "must be not be invalid" do
@@ -20,8 +26,9 @@ describe User do
     @user.must_respond_to :active
   end
 
-  it "must createa new active user" do
-    user = Fabricate(:user)
+  it "must create a new active user" do
+    # user = Fabricate(:user, email: 'wtf@wtf.com')
+    user = Fabricate.build :user
     user.active.must_equal true
   end
 
@@ -38,4 +45,19 @@ describe User do
   it "must respond to profile" do
     @user.must_respond_to :profile
   end
+
+  # this is protected
+  # it "must respond to a setup_profile method" do
+  #   @user.send(:public, :setup_profile).must_equal true
+  # end
+
+  it "must setup a user profile on create" do
+    user = Fabricate :user, email: "foo@bar1.com"
+    user.profile?.must_equal true
+  end
+
+  it "must respond to a full_name method" do
+    @user.must_respond_to :full_name
+  end
+
 end

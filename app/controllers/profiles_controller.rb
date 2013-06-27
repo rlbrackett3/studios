@@ -1,11 +1,12 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /profiles
   # GET /profiles.json
-  def index
-    @profiles = Profile.all
-  end
+  # def index
+  #   @profiles = Profile.all
+  # end
 
   # GET /profiles/1
   # GET /profiles/1.json
@@ -13,9 +14,9 @@ class ProfilesController < ApplicationController
   end
 
   # GET /profiles/new
-  def new
-    @profile = Profile.new
-  end
+  # def new
+  #   @profile = Profile.new
+  # end
 
   # GET /profiles/1/edit
   def edit
@@ -23,19 +24,19 @@ class ProfilesController < ApplicationController
 
   # POST /profiles
   # POST /profiles.json
-  def create
-    @profile = Profile.new(profile_params)
+  # def create
+  #   @profile = Profile.new(profile_params)
 
-    respond_to do |format|
-      if @profile.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @profile }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @profile.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @profile.save
+  #       format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+  #       format.json { render action: 'show', status: :created, location: @profile }
+  #     else
+  #       format.html { render action: 'new' }
+  #       format.json { render json: @profile.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
@@ -53,13 +54,13 @@ class ProfilesController < ApplicationController
 
   # DELETE /profiles/1
   # DELETE /profiles/1.json
-  def destroy
-    @profile.destroy
-    respond_to do |format|
-      format.html { redirect_to profiles_url }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @profile.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to profiles_url }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +70,7 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params[:profile]
+      # params[:profile]
+      params.require(:profile).permit(:fname, :lname, :bio, :tel, :school_id)
     end
 end
