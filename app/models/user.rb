@@ -61,7 +61,7 @@ class User
   after_create  :setup_profile
 
   # Validations
-
+  validate :role, presence: true
 
   def full_name
     [self.profile.fname, self.profile.lname].join(' ')

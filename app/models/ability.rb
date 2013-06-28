@@ -9,8 +9,11 @@ class Ability
       can :manage, :all
     elsif user.role == "assistant"
       can :read, :all
+      can :update, [Profile]
+      can :create, [User]
     else
       can :read, :all
+      can :update, [Profile], user: user
     end
 
 
