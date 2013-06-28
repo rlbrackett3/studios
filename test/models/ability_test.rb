@@ -34,6 +34,7 @@ describe Ability do
 
   describe "Assistant Role" do
     describe "User Permissions" do
+
       it "must allow an assistant to create a user" do
         assert @a_ability.can?(:create, User.new)
       end
@@ -49,44 +50,33 @@ describe Ability do
       it "must allow an assistant to view a user" do
         assert @a_ability.can?(:show, User.new)
       end
+
     end
 
     describe "Profile Permissions" do
-      it "must allow an assistant to create a Profile" do
-        assert @a_ability.cannot?(:create, Profile.new)
-      end
 
-      it "must not allow an assistant to destroy a Profile" do
-        assert @a_ability.cannot?(:destroy, Profile.new)
-      end
-
-      it "must not allow an assistant to update a Profile" do
-        assert @a_ability.can?(:update, Profile.new)
+      it "must not allow an assistant to manage a Profile" do
+        assert @a_ability.cannot?(:manage, Profile.new)
       end
 
       it "must allow an assistant to view a Profile" do
         assert @a_ability.can?(:show, Profile.new)
       end
+
     end
   end
 
   describe "Student Role" do
     describe "User Permissions" do
-      it "must not allow a student to create a user" do
-        assert @s_ability.cannot?(:create, User.new)
-      end
 
-      it "must not allow a student to destroy a user" do
-        assert @s_ability.cannot?(:destroy, User.new)
-      end
-
-      it "must not allow a student to update a user" do
-        assert @s_ability.cannot?(:update, User.new)
+      it "must not allow a student to manage a user" do
+        assert @s_ability.cannot?(:manage, User.new)
       end
 
       it "must allow a student to view a user" do
         assert @s_ability.can?(:show, User.new)
       end
+
     end
 
     describe "Profile Permissions" do
