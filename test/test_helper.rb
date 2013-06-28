@@ -12,8 +12,6 @@ require "minitest/pride"
 
 require 'database_cleaner'
 
-include Devise::TestHelpers
-
 Turn.config do |c|
   # use one of output formats:
   # :outline  - turn's original case/test outline mode [default]
@@ -32,6 +30,8 @@ Turn.config do |c|
 end
 
 class ActiveSupport::TestCase
+
+  include Devise::TestHelpers
 
   DatabaseCleaner.strategy = :truncation
   DatabaseCleaner.orm = "mongoid"
