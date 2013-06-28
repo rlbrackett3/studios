@@ -5,7 +5,13 @@ Studios::Application.routes.draw do
   devise_for :users
 
   resources :users do
-    resource :profile, :only => [:show, :edit, :update]
+    resource :profile, :only => [:show, :edit, :update] do
+      resources :websites
+    end
+  end
+
+  resource :profile, :only => [:show, :edit, :update] do
+    resources :websites
   end
 
   get "home/index"

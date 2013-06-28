@@ -4,7 +4,8 @@ describe User do
 
   before do
     DatabaseCleaner.start
-    @user = User.new
+    # @user = User.new
+    @user = Fabricate :user
   end
 
   after do
@@ -12,7 +13,8 @@ describe User do
   end
 
   it "must be not be invalid" do
-    @user.valid?.must_equal false
+    user = User.new
+    user.valid?.must_equal false
   end
 
   it "must be valid" do
@@ -21,43 +23,52 @@ describe User do
     @user.valid?.must_equal true
   end
 
-  # Setting status of a user (actove: true/false)
-  it "must respond to active boolean attr" do
-    @user.must_respond_to :active
-  end
 
-  it "must create a new active user" do
-    # user = Fabricate(:user, email: 'wtf@wtf.com')
-    user = Fabricate.build :user
-    user.active.must_equal true
-  end
+  describe "User Status" do
+    it "must respond to active boolean attr" do
+      @user.must_respond_to :active
+    end
 
-  it "must set a user to active:false" do
-    @user.active = false
-    @user.active.must_equal false
+    it "must create a new active user" do
+      user = Fabricate.build :user
+      user.active.must_equal true
+    end
+
+    it "must set a user to active:false" do
+      @user.active = false
+      @user.active.must_equal false
+    end
   end
 
   #################################
   ## Associations
   #################################
 
-  # User Profile
-  it "must respond to profile" do
-    @user.must_respond_to :profile
+  describe "User Associations" do
+    it "must respond to profile" do
+      @user.must_respond_to :profile
+    end
+
+    # this is protected
+    # it "must respond to a setup_profile method" do
+    #   @user.send(:public, :setup_profile).must_equal true
+    # end
+
+    it "must setup a user profile on create" do
+      user = Fabricate :user, email: "foo@bar1.com"
+      user.profile?.must_equal true
+    end
   end
 
-  # this is protected
-  # it "must respond to a setup_profile method" do
-  #   @user.send(:public, :setup_profile).must_equal true
-  # end
+  describe "User Utilities" do
+    it "must respond to a full_name method" do
+      @user.must_respond_to :full_name
+    end
 
-  it "must setup a user profile on create" do
-    user = Fabricate :user, email: "foo@bar1.com"
-    user.profile?.must_equal true
+    it "must construct the correct full name" do
+      @user.profile.fname = "Foo"
+      @user.profile.lname = "Bar"
+      @user.full_name.must_equal "Foo Bar"
+    end
   end
-
-  it "must respond to a full_name method" do
-    @user.must_respond_to :full_name
-  end
-
 end

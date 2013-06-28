@@ -56,6 +56,8 @@ class User
   # Callbacks
   after_create  :setup_profile
 
+  # Validations
+
 
   def full_name
     [self.profile.fname, self.profile.lname].join(' ')

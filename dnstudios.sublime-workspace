@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"must",
+				"must_equal"
+			],
+			[
 				"gra",
 				"gray-lighter"
 			],
@@ -42,10 +46,6 @@
 			[
 				"link-",
 				"link-hover"
-			],
-			[
-				"must",
-				"must_equal"
 			],
 			[
 				"text",
@@ -88,10 +88,13 @@
 	"buffers":
 	[
 		{
+			"contents": "class User\n  include Mongoid::Document\n  # Include default devise modules. Others available are:\n  # :token_authenticatable, :confirmable,\n  # :lockable, :timeoutable and :omniauthable\n   # ,\n  devise :invitable, :database_authenticatable, :registerable,\n         :recoverable, :rememberable, :trackable, :validatable\n\n  ## Database authenticatable\n  field :email,              type: String, default: \"\"\n  field :encrypted_password, type: String, default: \"\"\n\n  ## Recoverable\n  field :reset_password_token,   type: String\n  field :reset_password_sent_at, type: Time\n\n  ## Rememberable\n  field :remember_created_at, type: Time\n\n  ## Trackable\n  field :sign_in_count,      type: Integer, default: 0\n  field :current_sign_in_at, type: Time\n  field :last_sign_in_at,    type: Time\n  field :current_sign_in_ip, type: String\n  field :last_sign_in_ip,    type: String\n\n  ## Confirmable\n  # field :confirmation_token,   type: String\n  # field :confirmed_at,         type: Time\n  # field :confirmation_sent_at, type: Time\n  # field :unconfirmed_email,    type: String # Only if using reconfirmable\n\n  ## Lockable\n  # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts\n  # field :unlock_token,    type: String # Only if unlock strategy is :email or :both\n  # field :locked_at,       type: Time\n\n  ## Token authenticatable\n  # field :authentication_token, type: String\n\n  ## Invitable\n  field :invitation_token,        type: String\n  field :invitation_sent_at,      type: Time\n  field :invitation_accepted_at,  type: Time\n  field :invitation_limit,        type: Integer\n\n  index( {invitation_token: 1}, {:background => true} )\n  index( {invitation_by_id: 1}, {:background => true} )\n\n  field :active, type: Boolean, default: true\n\n  # Associations\n  embeds_one :profile\n\n  # Callbacks\n  after_create  :setup_profile\n\n  # Validations\n  \n\n\n  def full_name\n    [self.profile.fname, self.profile.lname].join(' ')\n  end\n\n  protected\n\n  def setup_profile\n    self.profile = Profile.new()\n    # code to instatiate websites\n    self.save\n  end\n\nend\n",
 			"file": "app/models/user.rb",
+			"file_size": 2054,
+			"file_write_time": 1372376065000000,
 			"settings":
 			{
-				"buffer_size": 1806,
+				"buffer_size": 2074,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,23 +102,7 @@
 			"file": "app/models/profile.rb",
 			"settings":
 			{
-				"buffer_size": 332,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/website.rb",
-			"settings":
-			{
-				"buffer_size": 145,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/profiles_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1937,
+				"buffer_size": 678,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,31 +110,18 @@
 			"file": "test/models/user_test.rb",
 			"settings":
 			{
-				"buffer_size": 873,
+				"buffer_size": 1317,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "require \"test_helper\"\n\ndescribe Profile do\n\n  before do\n    DatabaseCleaner.start\n    # @user = Fabricate :user\n    @profile = Fabricate :profile_with_user\n  end\n\n  after do\n    DatabaseCleaner.clean\n  end\n\n  it \"must be valid\" do\n    @profile.valid?.must_equal true\n  end\n\n  describe \"fname attr\" do\n    it \"must respond to a fname attr\" do\n      @profile.must_respond_to :fname\n    end\n\n    it \"must not create a profile with a fname < 2 char\" do\n      short_name = \"a\"\n      @profile.fname = short_name\n      @profile.valid?.must_equal false\n    end\n\n    it \"must not create a profile with a fname > 24 char\" do\n      long_name = \"a\" * 25\n      @profile.fname = long_name\n      @profile.valid?.must_equal false\n    end\n  end\n\n  describe \"lname attr\" do\n    it \"must respond to a lname attr\" do\n      @profile.must_respond_to :lname\n    end\n\n    it \"must not create a profile with a lname < 2 char\" do\n      short_name = \"a\"\n      @profile.lname = short_name\n      @profile.valid?.must_equal false\n    end\n\n    it \"must not create a profile with a lname > 24 char\" do\n      long_name = \"a\" * 25\n      @profile.lname = long_name\n      @profile.valid?.must_equal false\n    end\n  end\n\n  describe \"tel attr\" do\n    it \"must respond to a tel attr\" do\n      @profile.must_respond_to :tel\n    end\n  end\n\n  describe \"school_id attr\" do\n    it \"must respond to a uid attr\" do\n      @profile.must_respond_to :school_id\n    end\n  end\n\n  describe \"bio attr\" do\n    it \"must respond to a bio attr\" do\n      @profile.must_respond_to :bio\n    end\n\n    it \"must not create a profile with a bio < 2 char\" do\n      short_name = \"a\"\n      @profile.bio = short_name\n      @profile.valid?.must_equal false\n    end\n  end\n\n  #################################\n  ## Associations\n  #################################\n\n  describe \"User Associations\" do\n    it \"must respond to user\" do\n      @profile.must_respond_to :user\n    end\n\n    it \"must not create a profile without a user\" do\n      profile = Profile.new\n      profile.valid?.must_equal false\n    end\n  end\n\n  # Websites\n  it \"must respond to websites\" do\n    @profile.must_respond_to :websites\n  end\n\nend\n",
 			"file": "test/models/profile_test.rb",
+			"file_size": 2093,
+			"file_write_time": 1372395200000000,
 			"settings":
 			{
-				"buffer_size": 831,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "test/controllers/profiles_controller_test.rb",
-			"settings":
-			{
-				"buffer_size": 1647,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "test/models/website_test.rb",
-			"settings":
-			{
-				"buffer_size": 334,
+				"buffer_size": 2138,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,12 +129,12 @@
 			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1496,
+				"buffer_size": 1724,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "spec/fabricators/profile_fabricator.rb",
+			"file": "app/views/profiles/_form.html.haml",
 			"settings":
 			{
 				"buffer_size": 428,
@@ -168,18 +142,42 @@
 			}
 		},
 		{
-			"file": "test/test_helper.rb",
+			"file": "app/views/profiles/edit.html.haml",
 			"settings":
 			{
-				"buffer_size": 1313,
+				"buffer_size": 116,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Gemfile",
+			"file": "/home/robert/Dropbox/Sites/ffflourish/config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 1579,
+				"buffer_size": 3952,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.haml",
+			"settings":
+			{
+				"buffer_size": 608,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/index.html.haml",
+			"settings":
+			{
+				"buffer_size": 146,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/show.html.haml",
+			"settings":
+			{
+				"buffer_size": 169,
 				"line_ending": "Unix"
 			}
 		}
@@ -244,21 +242,30 @@
 	},
 	"file_history":
 	[
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/models/website.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/test/models/website_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/test/controllers/profiles_controller_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/profiles_controller.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/new.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/show.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/Gemfile",
+		"/home/robert/Dropbox/Sites/ruby2/studios/test/test_helper.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/spec/fabricators/profile_fabricator.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/spec/fabricators/user_fabricator.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/users_controller.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/Guardfile",
+		"/home/robert/Dropbox/Sites/ffflourish/app/models/user.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/_form.html.haml",
 		"/home/robert/.config/sublime-text-2/Packages/User/RubyTest.sublime-settings",
 		"/home/robert/.config/sublime-text-2/Packages/RubyTest/RubyTest.sublime-settings",
 		"/home/robert/Dropbox/Sites/ruby2/sample-app/app/controllers/somethings_controller.rb",
 		"/home/robert/Dropbox/Sites/ruby2/sample-app/test/controllers/somethings_controller_test.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/spec/fabricators/user_fabricator.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/Guardfile",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/layouts/application.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/helpers/profiles_helper_test.rb",
 		"/home/robert/Dropbox/Sites/ruby2/sample-app/Gemfile",
 		"/home/robert/Dropbox/Sites/ruby2/studios/spec/fabricators/website_fabricator.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/test/test_helper.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/config/application.rb",
 		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/spec/spec_helper.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/Gemfile",
 		"/home/robert/Dropbox/Sites/ruby2/studios/.ruby-version",
 		"/home/robert/Dropbox/Sites/ruby2/studios/.ruby-gemset",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/application.css.scss",
@@ -362,16 +369,7 @@
 		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/data/photos.yml",
 		"/home/robert/Dropbox/Sites/Locomotiveapps/jap-editor/data/slideshow_images.yml",
 		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/config/deploy.yml",
-		"/home/robert/Dropbox/Sites/spreetest/Gemfile",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/environments/development.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/environments/production.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/application.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/environment.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/routes.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/mongoid.yml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog/config/initializers/locomotive.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/.rvmrc",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/nourish/Gemfile"
+		"/home/robert/Dropbox/Sites/spreetest/Gemfile"
 	],
 	"find":
 	{
@@ -389,6 +387,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"p",
+			"p = Profile.new(",
+			"without",
+			"lname",
+			"fname",
+			"url",
+			"Profile",
+			"profile",
+			"Profile",
+			"profile",
 			"uid",
 			"fname",
 			"profile",
@@ -506,17 +514,7 @@
 			"title",
 			"////////////////////////////////////////////",
 			"* ",
-			"full",
-			"-",
-			"Certification",
-			"\n-Certification",
-			"-",
-			"true",
-			"offering",
-			"'''\n",
-			"png'''",
-			"''",
-			"samples"
+			"full"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -535,7 +533,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -543,15 +541,15 @@
 					"file": "app/models/user.rb",
 					"settings":
 					{
-						"buffer_size": 1806,
+						"buffer_size": 2074,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1745,
-								1745
+								1868,
+								1868
 							]
 						],
 						"settings":
@@ -561,7 +559,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 39.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -571,69 +569,15 @@
 					"file": "app/models/profile.rb",
 					"settings":
 					{
-						"buffer_size": 332,
+						"buffer_size": 678,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								234,
-								234
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/models/website.rb",
-					"settings":
-					{
-						"buffer_size": 145,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								145,
-								145
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/profiles_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1937,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								328,
-								328
+								666,
+								666
 							]
 						],
 						"settings":
@@ -651,23 +595,79 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "test/models/user_test.rb",
 					"settings":
 					{
-						"buffer_size": 873,
+						"buffer_size": 1317,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								644,
-								644
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "test/models/profile_test.rb",
+					"settings":
+					{
+						"buffer_size": 2138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2038,
+								2038
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1724,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								305,
+								305
 							]
 						],
 						"settings":
@@ -684,23 +684,23 @@
 				},
 				{
 					"buffer": 5,
-					"file": "test/models/profile_test.rb",
+					"file": "app/views/profiles/_form.html.haml",
 					"settings":
 					{
-						"buffer_size": 831,
+						"buffer_size": 428,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								142,
+								142
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -712,46 +712,50 @@
 				},
 				{
 					"buffer": 6,
-					"file": "test/controllers/profiles_controller_test.rb",
+					"file": "app/views/profiles/edit.html.haml",
 					"settings":
 					{
-						"buffer_size": 1647,
+						"buffer_size": 116,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								918,
-								918
+								83,
+								83
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
 				{
 					"buffer": 7,
-					"file": "test/models/website_test.rb",
+					"file": "/home/robert/Dropbox/Sites/ffflourish/config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 334,
+						"buffer_size": 3952,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								297,
-								297
+								0,
+								0
 							]
 						],
 						"settings":
@@ -768,23 +772,23 @@
 				},
 				{
 					"buffer": 8,
-					"file": "config/routes.rb",
+					"file": "app/views/layouts/application.html.haml",
 					"settings":
 					{
-						"buffer_size": 1496,
+						"buffer_size": 608,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								832,
-								832
+								608,
+								608
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -793,34 +797,26 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 9,
-					"file": "spec/fabricators/profile_fabricator.rb",
+					"file": "app/views/users/index.html.haml",
 					"settings":
 					{
-						"buffer_size": 428,
+						"buffer_size": 146,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								116,
-								116
+								146,
+								146
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -830,53 +826,23 @@
 				},
 				{
 					"buffer": 10,
-					"file": "test/test_helper.rb",
+					"file": "app/views/users/show.html.haml",
 					"settings":
 					{
-						"buffer_size": 1313,
+						"buffer_size": 169,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								249,
-								249
+								169,
+								169
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 1579,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1213,
-								1213
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
