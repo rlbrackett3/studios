@@ -48,7 +48,11 @@ class User
   index( {invitation_token: 1}, {:background => true} )
   index( {invitation_by_id: 1}, {:background => true} )
 
+  # Additional fields
   field :active, type: Boolean, default: true
+
+  field :role, type: String, default: "student"
+  ROLES = %w[instructor assistant student]
 
   # Associations
   embeds_one :profile

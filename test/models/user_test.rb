@@ -40,6 +40,21 @@ describe User do
     end
   end
 
+  describe "User Role" do
+    it "must respond to a role method" do
+      @user.must_respond_to :role
+    end
+
+    it "must contain an array of ROLES" do
+      User::ROLES.must_equal ["instructor", "assistant", "student"]
+    end
+
+    it "must assign a default role of student to a new user" do
+      u = User.new
+      u.role.must_equal "student"
+    end
+  end
+
   #################################
   ## Associations
   #################################

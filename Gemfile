@@ -9,6 +9,7 @@ gem "carrierwave-mongoid", require: "carrierwave/mongoid"
 
 gem "decent_exposure"
 gem 'simple_form'
+gem 'cancan'
 
 gem "mongoid", github: "mongoid/mongoid"
 
