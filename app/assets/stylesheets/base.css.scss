@@ -1,0 +1,232 @@
+// Colors
+
+$gray-lightest:     #EFEFEF;
+$gray-lighter:      #999999;
+$gray:              #808285;
+$gray-darker:       #6D6D6D;
+$gray-darkest:      #333333;
+
+$red:               #b91f25;
+
+$blue-lightest:     #68E7FC;
+$blue-lighter:      #adffff;
+$blue:              #40D7FF;
+
+
+
+// CSS transition fade-in fade-out
+
+@mixin ease-in-out($property: 'all', $duration: '0.5s', $function: 'ease-in-out') {
+  @include transition-property($property);
+  @include transition-duration($duration);
+  @include transition-timing-function($function);
+}
+
+// CSS Text Effects
+
+@mixin truncate-text($value: 'ellipsis') {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Styles
+
+body {
+  background-color: #fff;
+  color: $gray-darkest;
+  font-family: 'Dosis', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.35em;
+}
+
+// Typography
+
+@include establish-baseline;
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,200,600,800|EB+Garamond);
+// font-family: 'Dosis', sans-serif;
+// font-family: 'EB Garamond', serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Dosis', sans-serif;
+  font-weight: 600;
+  line-height: 1.35em;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 10px;
+}
+
+
+p, ol, ul, td {
+  font-family: 'Dosis', sans-serif;
+  font-size: 12px;
+  line-height: 1.35em;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+// Links
+
+a {
+  color: $gray-darker;
+  text-decoration: none;
+  font-family: 'Dosis', sans-serif;
+  font-size: 12px;
+  line-height: 1.35em;
+  @include ease-in-out($duration: '0.2s');
+
+  &:visited {
+    color: $gray-darker;
+    @include ease-in-out($duration: '0.2s');
+  }
+
+  &:hover {
+    color: $red;
+    @include ease-in-out($duration: '0.2s');
+  }
+}
+
+// Forms
+
+form {
+  @include span-columns(6, 12);
+
+  fieldset.form-inputs, .inputs {
+    width: auto;
+    height: auto;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    .input {
+      width: auto;
+      height: 35px;
+
+      label {
+        @include span-columns(1, 6);
+        text-align: right;
+        margin-top: 7px;
+      }
+
+      input, input[type=textarea] {
+        @include span-columns(4, 6);
+        @include border-radius(0px);
+        padding: 3px 5px;
+        font-size: 11px;
+        border: 1px solid $gray-darkest;
+      }
+
+      input[type=textarea] {
+        min-height: 90px;
+      }
+
+      input[type='checkbox'] {
+        margin-top: 7px;
+      }
+
+      input[type=radio] {
+        margin-top: 7px;
+      }
+    }// .input
+  }// fieldset
+
+  .form-actions, .actions {
+    @include span-columns(4, 6);
+    @include push(2);
+    border-top: 1px solid $gray-darkest;
+    margin-top: 15px;
+    padding-right: 4%;
+
+    .button {
+      @include span-columns(1, 4);
+      padding: 2px 5px 3px 5px;
+      border-top: none;
+      border-right: 1px solid $gray-darkest;
+      border-left: 1px solid $gray-darkest;
+      border-bottom: 1px solid $gray-darkest;
+      background: none;
+      background-color: #FFF;
+      @include ease-in-out($duration: '0.2s');
+
+      &:hover {
+        background-color: $gray-darkest;
+        color: $blue;
+        @include ease-in-out($duration: '0.2s');
+      }
+    }
+  }// actions
+}// form
+
+.devise-link {
+  @include span-columns(5, 12);
+  @include push(1);
+  margin-top: 20px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+// Alert Notice Error
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: $red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 1px solid $red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
