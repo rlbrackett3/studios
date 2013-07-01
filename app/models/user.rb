@@ -71,7 +71,10 @@ class User
 
   def setup_profile
     self.profile = Profile.new()
-    # code to instatiate websites
+    self.profile.websites.create!(title: "Twitter",   handle: "@",  url: "")
+    self.profile.websites.create!(title: "Facebook",  handle: "",   url: "")
+    self.profile.websites.create!(title: "LinkdIn",   handle: "",   url: "")
+    self.profile.websites.create!(title: "Google+",   handle: "",   url: "")
     self.save
   end
 

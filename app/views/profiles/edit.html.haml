@@ -1,7 +1,12 @@
-%h1 Editing profile
+%section.page-title
+  .page-title-square
+  - if @user.full_name
+    %h2.page-title-header= "Editing #{@user.full_name}'s Profile"
+  - else
+    %h2.page-title-header= "Editing #{@user.email}'s Profile"
 
 = render 'form'
 
-= link_to 'Show', user_profile_path(@profile)
+= link_to "Show #{@user.full_name}'s Profile", user_path(@profile.user)
 \|
-= link_to 'Back', users_path
+= link_to 'All Users', users_path

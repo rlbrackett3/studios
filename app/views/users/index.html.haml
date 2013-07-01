@@ -1,7 +1,11 @@
-.page-title
+%section.page-title
   .page-title-square
   %h2.page-title-header Users
-%ul#users
-  - @users.each do |user|
-    %li.user
-      = link_to user.email, user_path(user), title: "Check out #{user.full_name}"
+
+%section#users.content
+  %ul.users
+    - @users.each do |user|
+      %li.user
+        / insert user image here
+        = image_tag("", size: "50x50")
+        = link_to user.email, user_path(user), title: "Check out #{user.full_name}"

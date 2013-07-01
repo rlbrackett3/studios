@@ -1,6 +1,60 @@
-- if @user.full_name
-  %h1= @user.full_name
-- else
-  %h1= @user.email
-- if @user == current_user
-  = link_to "change your password", edit_user_registration_path
+%section.page-title
+  .page-title-square
+  - if @user.full_name
+    %h2.page-title-header= "#{@user.full_name}'s Profile"
+  - else
+    %h2.page-title-header= "#{@user.email}'s Profile"
+  .page-title-controls= link_to "(edit)", edit_user_profile_path(@user, @user.profile)
+
+%section#user-profile.content
+
+  %ul
+    %section.avatar
+      %li
+        .title avatar:
+        .value= image_tag("avatar_large.png")
+
+    %section.basic-attr
+      %li
+        .title name:
+        .value= @user.full_name
+      %li
+        .title email:
+        .value= @user.email
+      %li
+        .title tel:
+        .value= @user.profile.tel
+      %li
+        .title school:
+        .value= @user.profile.school_id
+      %li
+        .title role:
+        .value= @user.role
+
+    %section.sites
+      - @user.profile.websites.each do |w|
+        %li
+          .title= w.title
+          .value= w.url
+
+    %section.bio
+      %li
+        .title bio:
+        .value= @user.profile.bio
+
+    %section.stats
+      %li
+        .title courses:
+        .value Course List Here
+      %li
+        .title assigned:
+        .value COUNT
+      %li
+        .title posts:
+        .value COUNT
+      %li
+        .title images:
+        .value COUNT
+      %li
+        .title videos:
+        .value COUNT

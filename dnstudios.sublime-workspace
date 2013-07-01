@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"must",
-				"must_equal"
+				"inline",
+				"inline-block"
+			],
+			[
+				"gray",
+				"gray-darkest"
 			],
 			[
 				"gra",
-				"gray-lighter"
+				"gray-darkest"
+			],
+			[
+				"gray-",
+				"gray-darkest"
+			],
+			[
+				"must",
+				"must_equal"
 			],
 			[
 				"blank",
@@ -38,10 +50,6 @@
 			[
 				"blue",
 				"blueSquare"
-			],
-			[
-				"gray",
-				"gray-lighter"
 			],
 			[
 				"link-",
@@ -88,10 +96,26 @@
 	"buffers":
 	[
 		{
-			"file": "config/routes.rb",
+			"file": "app/views/layouts/application.html.haml",
 			"settings":
 			{
-				"buffer_size": 1724,
+				"buffer_size": 729,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/index.html.haml",
+			"settings":
+			{
+				"buffer_size": 305,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/users/show.html.haml",
+			"settings":
+			{
+				"buffer_size": 297,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,15 +123,31 @@
 			"file": "app/assets/stylesheets/application.css.scss",
 			"settings":
 			{
-				"buffer_size": 270,
+				"buffer_size": 219,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/layouts/application.html.haml",
+			"file": "app/assets/stylesheets/base.css.scss",
 			"settings":
 			{
-				"buffer_size": 608,
+				"buffer_size": 4380,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/layout.css.scss",
+			"settings":
+			{
+				"buffer_size": 1458,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/public/stylesheets/base.css.scss",
+			"settings":
+			{
+				"buffer_size": 4386,
 				"line_ending": "Unix"
 			}
 		},
@@ -115,7 +155,7 @@
 			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 1396,
+				"buffer_size": 1423,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,7 +163,7 @@
 			"file": "test/test_helper.rb",
 			"settings":
 			{
-				"buffer_size": 1936,
+				"buffer_size": 1938,
 				"line_ending": "Unix"
 			}
 		}
@@ -175,10 +215,7 @@
 	},
 	"console":
 	{
-		"height": 139.0,
-		"history":
-		[
-		]
+		"height": 139.0
 	},
 	"distraction_free":
 	{
@@ -191,21 +228,46 @@
 	},
 	"file_history":
 	[
-		"/home/robert/Dropbox/Sites/ffflourish/config/routes.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/edit.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/_form.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/devise/registrations/edit.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/devise/sessions/new.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/controllers/profiles_controller_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/profiles_controller.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/pages/index.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/devise/shared/_links.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/users/show.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/scaffolds.css.scss",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/normalize.css",
+		"/home/robert/Dropbox/Sites/ffflourish/config/routes.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/routes.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/application_controller.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/users_controller.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/controllers/users_controller_test.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/_form.html.haml",
-		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/edit.html.haml",
-		"/home/robert/Dropbox/Sites/ruby2/studios/test/models/user_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/pages_controller.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/test/controllers/pages_controller_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/sample-app/app/controllers/somethings_controller.rb",
+		"/home/robert/Dropbox/Sites/ruby2/sample-app/test/controllers/somethings_controller_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/home_controller.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/users/_form.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/config/initializers/sanitizers.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/lib/user_sanitizer.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/registrations_controller.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/models/user.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/models/ability.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/test/models/ability_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/test/models/user_test.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/application.css.scss",
+		"/home/robert/Dropbox/Sites/ffflourish/app/models/ability.rb",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/devise/invitations/edit.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/devise/invitations/new.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/users/new.html.haml",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/users/edit.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/models/profile_test.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/models/profile.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/users/index.html.haml",
-		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/users/show.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/models/website.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/models/website_test.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/profiles_controller.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/new.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/show.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/Gemfile",
@@ -216,8 +278,6 @@
 		"/home/robert/Dropbox/Sites/ffflourish/app/models/user.rb",
 		"/home/robert/.config/sublime-text-2/Packages/User/RubyTest.sublime-settings",
 		"/home/robert/.config/sublime-text-2/Packages/RubyTest/RubyTest.sublime-settings",
-		"/home/robert/Dropbox/Sites/ruby2/sample-app/app/controllers/somethings_controller.rb",
-		"/home/robert/Dropbox/Sites/ruby2/sample-app/test/controllers/somethings_controller_test.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/layouts/application.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/helpers/profiles_helper_test.rb",
 		"/home/robert/Dropbox/Sites/ruby2/sample-app/Gemfile",
@@ -226,7 +286,6 @@
 		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/spec/spec_helper.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/.ruby-version",
 		"/home/robert/Dropbox/Sites/ruby2/studios/.ruby-gemset",
-		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/application.css.scss",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/assets/stylesheets/_grid-settings.scss",
 		"/home/robert/Dropbox/Sites/ruby2/studios/config/compass.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/config/environments/development.rb",
@@ -237,7 +296,6 @@
 		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/environments/production.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/config/environments/production.rb",
 		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/environments/development.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/config/routes.rb",
 		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/mongoid.yml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/config/mongoid.yml",
 		"/home/robert/Dropbox/Sites/ruby2/rails4mongo/config/application.rb",
@@ -297,28 +355,7 @@
 		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/public/stylesheets/bootstrap.min.css",
 		"/home/robert/Dropbox/Sites/Locomotiveapps/locomotivecms_install.liquid.haml",
 		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/.cred",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/.gitignore",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/Gemfile",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/routes.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/environments/development.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/environments/development.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/environments/production.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/initializers/locomotive.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/config/application.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/application.rb",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/config/mongoid.yml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs/Gemfile",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dbmb/Gemfile",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/Gemfile",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/content_types/responses.yml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/content_types/videos.yml",
-		"/home/robert/Dropbox/Sites/dn/app/views/layouts/_footer.html.haml",
-		"/home/robert/Dropbox/Sites/dn/app/views/layouts/_head.html.haml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/lcblog-editor/config/deploy.yml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/Guardfile",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/views/pages/posts.liquid.haml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/app/views/pages/about.liquid.haml",
-		"/home/robert/Dropbox/Sites/dn/app/views/layouts/_nav.html.haml"
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace/.gitignore"
 	],
 	"find":
 	{
@@ -336,6 +373,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
+			" =>",
+			":",
+			" =>",
+			"r =>",
+			" => ",
+			"somethings",
+			"home",
+			"Override",
+			"something",
+			"Something",
+			"something",
+			"Something",
+			"something",
+			"user",
+			"User",
+			"user",
+			"User",
+			"user",
+			"User",
+			"user",
+			"create",
+			"destroy",
+			"user",
+			"User",
+			"user",
+			"create",
+			"instructor",
+			" =>",
 			"profile",
 			"created_at",
 			"p",
@@ -434,36 +500,7 @@
 			"action.",
 			"Action.",
 			"action",
-			"Action",
-			"action",
-			"Action",
-			"action",
-			"Action",
-			"action",
-			"actions",
-			"app",
-			"attr_accessible",
-			"rvm",
-			"resource_name",
-			"'\n",
-			"=> ",
-			"projektor",
-			"name",
-			"Item #",
-			"Item #1",
-			"item",
-			"Item #",
-			"2",
-			"Item #2",
-			"Item #",
-			" =>",
-			"full",
-			"event",
-			"item",
-			"Item #",
-			"title/",
-			"title",
-			"////////////////////////////////////////////"
+			"Action"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -482,91 +519,23 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "config/routes.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1724,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								305,
-								305
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/stylesheets/application.css.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 270,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								270,
-								270
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SCSS/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
 			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 0,
 					"file": "app/views/layouts/application.html.haml",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 608,
+						"buffer_size": 729,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								608,
-								608
+								713,
+								713
 							]
 						],
 						"settings":
@@ -582,20 +551,193 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Gemfile",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "app/views/users/index.html.haml",
 					"settings":
 					{
-						"buffer_size": 1396,
+						"buffer_size": 305,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1279,
-								1279
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/users/show.html.haml",
+					"settings":
+					{
+						"buffer_size": 297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "app/assets/stylesheets/application.css.scss",
+					"settings":
+					{
+						"buffer_size": 219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/base.css.scss",
+					"settings":
+					{
+						"buffer_size": 4380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1170,
+								1170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 572.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/stylesheets/layout.css.scss",
+					"settings":
+					{
+						"buffer_size": 1458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1256,
+								1256
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"file": "/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/public/stylesheets/base.css.scss",
+					"settings":
+					{
+						"buffer_size": 4386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3907,
+								3907
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1482.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 1423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
 							]
 						],
 						"settings":
@@ -611,20 +753,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 8,
 					"file": "test/test_helper.rb",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1936,
+						"buffer_size": 1938,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								759,
-								759
+								277,
+								277
 							]
 						],
 						"settings":
@@ -691,7 +832,6 @@
 	{
 		"height": 329.0
 	},
-	"project": "dnstudios.sublime-project",
 	"replace":
 	{
 		"height": 64.0
@@ -713,24 +853,10 @@
 		],
 		"width": 0.0
 	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"settings":
-	{
-	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 168.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"side_bar_width": 207.0,
+	"status_bar_visible": true
 }

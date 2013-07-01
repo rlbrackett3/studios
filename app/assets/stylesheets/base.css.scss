@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Dosis', sans-serif;
   font-weight: 600;
   line-height: 1.35em;
+  margin: 10px 0;
 }
 
 h1 {
@@ -116,8 +117,9 @@ a {
 
 form {
   @include span-columns(6, 12);
+  margin-top: 20px;
 
-  fieldset.form-inputs, .inputs {
+  fieldset, fieldset.form-inputs, .inputs {
     width: auto;
     height: auto;
     border: none;
@@ -125,8 +127,13 @@ form {
     padding: 0;
 
     .input {
-      width: auto;
-      height: 35px;
+      width: 100%;
+      max-width: 350px;
+      min-height: 25px;
+      height: auto;
+      position: relative;
+      float: left;
+      margin-bottom: 10px;
 
       label {
         @include span-columns(1, 6);
@@ -134,7 +141,7 @@ form {
         margin-top: 7px;
       }
 
-      input, input[type=textarea] {
+      input, textarea {
         @include span-columns(4, 6);
         @include border-radius(0px);
         padding: 3px 5px;
@@ -142,8 +149,9 @@ form {
         border: 1px solid $gray-darkest;
       }
 
-      input[type=textarea] {
+      textarea {
         min-height: 90px;
+        max-width: 230px;
       }
 
       input[type='checkbox'] {
@@ -152,6 +160,13 @@ form {
 
       input[type=radio] {
         margin-top: 7px;
+      }
+
+      span.hint {
+        @include span-columns(4, 6);
+        margin-top: 5px;
+        font-size: 11px;
+        font-style: italic;
       }
     }// .input
   }// fieldset
@@ -182,6 +197,12 @@ form {
     }
   }// actions
 }// form
+
+.form-links {
+  @include span-columns(5, 12);
+  @include push(1);
+  margin-top: 20px;
+}
 
 .devise-link {
   @include span-columns(5, 12);
@@ -224,7 +245,7 @@ div {
     background-color: #c00;
     color: #fff;
   }
-  ul li {
+  ul, li {
     font-size: 12px;
     list-style: square;
   }

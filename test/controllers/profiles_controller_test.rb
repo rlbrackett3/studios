@@ -28,7 +28,7 @@ describe ProfilesController do
                               tel: @profile.tel,
                               school_id: @profile.school_id,
                             }
-    assert_redirected_to user_profile_path(assigns(:profile))
+    assert_redirected_to user_path(assigns(:user))
   end
 
 end

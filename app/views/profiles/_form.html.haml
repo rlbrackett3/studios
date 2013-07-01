@@ -5,12 +5,17 @@
       %ul
         - @profile.errors.full_messages.each do |msg|
           %li= msg
-
-  = f.input :fname
-  = f.input :lname
-  = f.input :bio, as: :text
-  = f.input :tel, as: :tel
-  = f.input :school_id
+  %fieldset
+    = f.input :fname
+    = f.input :lname
+    = f.input :bio, as: :text
+    = f.input :tel, as: :tel
+    = f.input :school_id
 
   .actions
-    = f.submit 'Save'
+    = f.button :submit, 'Save'
+
+.form-links
+  %h4 Account Detials
+  - if @user == current_user
+    = link_to "change your password", edit_user_registration_path
