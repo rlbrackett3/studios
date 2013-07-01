@@ -120,20 +120,27 @@ form {
   margin-top: 20px;
 
   fieldset, fieldset.form-inputs, .inputs {
-    width: auto;
+    @include span-columns(6, 6);
     height: auto;
     border: none;
-    margin: 0;
+    margin: 0 0 25px 0;
     padding: 0;
 
+    .hint {
+      @include span-columns(5 omega, 6);
+      font-size: 11px;
+      font-style: italic;
+      color: $gray;
+    }
+
     .input {
-      width: 100%;
+      @include span-columns(6, 6);
       max-width: 350px;
       min-height: 25px;
       height: auto;
       position: relative;
       float: left;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
 
       label {
         @include span-columns(1, 6);
@@ -145,6 +152,7 @@ form {
         @include span-columns(4, 6);
         @include border-radius(0px);
         padding: 3px 5px;
+        margin-bottom: 5px;
         font-size: 11px;
         border: 1px solid $gray-darkest;
       }
@@ -162,12 +170,7 @@ form {
         margin-top: 7px;
       }
 
-      span.hint {
-        @include span-columns(4, 6);
-        margin-top: 5px;
-        font-size: 11px;
-        font-style: italic;
-      }
+
     }// .input
   }// fieldset
 
@@ -199,10 +202,10 @@ form {
 }// form
 
 .form-links {
-  @include span-columns(5, 12);
-  @include push(1);
+  @include span-columns(6, 12);
+  @include push(0);
   margin-top: 20px;
-}
+}// form-links
 
 .devise-link {
   @include span-columns(5, 12);

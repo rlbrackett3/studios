@@ -164,6 +164,7 @@ GEM
       minitest-rails (~> 0.9.1)
     moped (1.5.0)
     multi_json (1.7.7)
+    nested_form (0.3.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     origin (1.1.0)
@@ -268,6 +269,7 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   mongoid!
+  nested_form
   puma
   rails (= 4.0.0)
   rb-inotify

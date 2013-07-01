@@ -8,9 +8,21 @@
   %fieldset
     = f.input :fname
     = f.input :lname
-    = f.input :bio, as: :text
     = f.input :tel, as: :tel
-    = f.input :school_id
+    = f.input :school
+
+  %fieldset
+    %h5.hint please include the http:// or https:// prefix for all URLs
+    = f.input :website,       as: :url
+    = f.input :portfolio,     as: :url
+    = f.input :blog,          as: :url
+    = f.input :twitter_url,   as: :url, label: "Twitter", hint: "http://www.twitter.com/YOUR_TWITTER_UNSERNAME"
+    = f.input :facebook_url,  as: :url, label: "Facebook"
+    = f.input :google_url,    as: :url, label: "Google+"
+    = f.input :linkdin_url,   as: :url, label: "LinkdIn"
+
+  %fieldset
+    = f.input :bio, as: :text
 
   .actions
     = f.button :submit, 'Save'

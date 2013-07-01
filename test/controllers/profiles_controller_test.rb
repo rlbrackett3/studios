@@ -26,7 +26,7 @@ describe ProfilesController do
                               lname: @profile.lname,
                               bio: @profile.bio,
                               tel: @profile.tel,
-                              school_id: @profile.school_id,
+                              school: @profile.school
                             }
     assert_redirected_to user_path(assigns(:user))
   end

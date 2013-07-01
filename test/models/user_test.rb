@@ -73,25 +73,6 @@ describe User do
       user = Fabricate :user, email: "foo@bar1.com"
       user.profile?.must_equal true
     end
-
-    it "must setup social media webistes on create" do
-      user = Fabricate :user
-      user.profile.websites?.must_equal true
-    end
-
-    it "must contain the default social media websites on create" do
-      titles = []
-
-      @user.profile.websites.each do |w|
-        titles << w.title
-      end
-
-      titles.must_include "Twitter"
-      titles.must_include "Facebook"
-      titles.must_include "LinkdIn"
-      titles.must_include "Google+"
-      # Add or Subtract default media sites here
-    end
   end
 
   describe "User Utilities" do

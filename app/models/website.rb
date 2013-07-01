@@ -11,9 +11,7 @@ class Website
 
   # Validations
   validates :url,   presence: true,
-                    uniqueness: true,
                     format: URI::regexp(%w(http https)),
-                    allow_nil: false,
                     allow_blank: true
   validates :title, presence: true
 

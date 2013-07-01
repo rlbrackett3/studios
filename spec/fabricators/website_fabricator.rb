@@ -1,2 +1,0 @@
-Fabricator(:website) do
-end

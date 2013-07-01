@@ -26,16 +26,33 @@
         .value= @user.profile.tel
       %li
         .title school:
-        .value= @user.profile.school_id
+        .value= @user.profile.school
       %li
         .title role:
         .value= @user.role
 
     %section.sites
-      - @user.profile.websites.each do |w|
-        %li
-          .title= w.title
-          .value= w.url
+      %li
+        .title website:
+        .value= link_to "#{@user.profile.website}", @user.profile.website, target: "_blank"
+      %li
+        .title portfolio:
+        .value= link_to "#{@user.profile.portfolio}", @user.profile.portfolio, target: "_blank"
+      %li
+        .title blog:
+        .value= link_to "#{@user.profile.blog}", @user.profile.blog, target: "_blank"
+      %li
+        .title twitter:
+        .value= link_to "#{@user.profile.twitter_url}", @user.profile.twitter_url, target: "_blank"
+      %li
+        .title facebook:
+        .value= link_to "#{@user.profile.facebook_url}", @user.profile.facebook_url, target: "_blank"
+      %li
+        .title google+:
+        .value= link_to "#{@user.profile.google_url}", @user.profile.google_url, target: "_blank"
+      %li
+        .title linkdin:
+        .value= link_to "#{@user.profile.linkdin_url}", @user.profile.linkdin_url, target: "_blank"
 
     %section.bio
       %li
