@@ -41,6 +41,7 @@ header {
 
 #main {
   @include span-columns(12);
+  min-width: 480px;
   border-top: 1px solid $gray-darkest;
 
 
@@ -96,11 +97,11 @@ header {
       }
 
       li {
-        width: 100%;
+        @include span-columns(6, 6);
         height: auto;
         list-style: none;
         padding: 0;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         clear: both;
 
         .title {
@@ -114,6 +115,10 @@ header {
 
         .count {
           @include span-columns(1, 6);
+        }
+
+        .ranking {
+          @include span-columns(3, 6);
         }
 
       }// li
