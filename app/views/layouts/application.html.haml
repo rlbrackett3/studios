@@ -17,7 +17,7 @@
         %nav
           - if user_signed_in?
             = link_to "logout", destroy_user_session_path, method: :delete
-            = link_to "my profile", user_path(current_user)
+            = link_to "my profile", user_profile_path(current_user, current_user.profile)
           - else
             = link_to "login", new_user_session_path
         %a.logo{ href: root_path }
