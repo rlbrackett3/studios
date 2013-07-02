@@ -9,15 +9,15 @@
   %body
     .container
 
-      - if flash[:notice] || flash[:alert]
-        .alert.trasparent
-          = flash[:notice] || flash[:alert]
+      - if flash[:notice] || flash[:alert] || flash[:message]
+        .notice.alert
+          = flash[:notice] || flash[:alert] || flash[:message]
 
       %header
         %nav
           - if user_signed_in?
-            = link_to "logout", destroy_user_session_path, :method => :delete
-            = link_to "settings", user_path(current_user)
+            = link_to "logout", destroy_user_session_path, method: :delete
+            = link_to "my profile", user_path(current_user)
           - else
             = link_to "login", new_user_session_path
         %a.logo{ href: root_path }

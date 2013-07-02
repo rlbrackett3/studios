@@ -4,6 +4,17 @@
   @include container;
 }
 
+// alerts and notices
+.alert, .notice {
+  position: absolute;
+  top: 0;
+  width: 700px;
+  z-index: 99;
+  margin: 5px auto;
+  color: $blue;
+  text-align: center;
+}
+
 // Header
 
 header {

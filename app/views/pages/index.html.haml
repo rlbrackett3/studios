@@ -1,7 +1,14 @@
-%section.page-title
-  .page-title-square
-  %h2.page-title-header Home
-
-%section#feed.content
-  %p User homepage feed goes here
-  = link_to "View all users", users_path
+- if user_signed_in?
+  %section.page-title
+    .page-title-square
+    %h2.page-title-header= "#{current_user.full_name}'s Feed"
+  %section#user-home.content
+    %p User homepage feed goes here
+    = link_to "View all users", users_path
+- else
+  %section.page-title
+    .page-title-square
+    %h2.page-title-header Home
+  %section#home.content
+    %h1 Landing Page Content Here
+    = link_to "View all users", users_path

@@ -1,83 +1,13 @@
 %section.page-title
   .page-title-square
-  - if @user.full_name
-    %h2.page-title-header= "#{@user.full_name}'s Profile"
-  - else
-    %h2.page-title-header= "#{@user.email}'s Profile"
-  .page-title-controls= link_to "(edit)", edit_user_profile_path(@user, @user.profile)
+  %h2.page-title-header
+    - if @user.full_name.size > 1
+      = @user.full_name
+    - else
+      = @user.email
+  .page-title-controls
+    = link_to "(view profile)", user_profile_path(@user, @user.profile)
+    = link_to "(back)", users_path
 
-%section#user-profile.content
-
-  %ul
-    %section.avatar
-      %li
-        .title avatar:
-        .value= image_tag(@user.profile.avatar.url(:large))
-
-    %section.basic-attr
-      %li
-        .title name:
-        .value= @user.full_name
-      %li
-        .title email:
-        .value= @user.email
-      %li
-        .title tel:
-        .value= @user.profile.tel
-      %li
-        .title school:
-        .value= @user.profile.school
-      %li
-        .title role:
-        .value= @user.role
-
-    %section.sites
-      %li
-        .title website:
-        .value= link_to "#{@user.profile.website}", @user.profile.website, target: "_blank", title: "#{@user.full_name}'s Personal Site"
-      %li
-        .title portfolio:
-        .value= link_to "#{@user.profile.portfolio}", @user.profile.portfolio, target: "_blank", title: "#{@user.full_name}'s Portfolio Site"
-      %li
-        .title blog:
-        .value= link_to "#{@user.profile.blog}", @user.profile.blog, target: "_blank", title: "#{@user.full_name}'s Blog"
-      %li
-        .title twitter:
-        .value= link_to "#{@user.profile.twitter_url}", @user.profile.twitter_url, target: "_blank", title: "#{@user.full_name}'s Twitter"
-      %li
-        .title facebook:
-        .value= link_to "#{@user.profile.facebook_url}", @user.profile.facebook_url, target: "_blank", title: "#{@user.full_name}'s Facebook"
-      %li
-        .title google+:
-        .value= link_to "#{@user.profile.google_url}", @user.profile.google_url, target: "_blank", title: "#{@user.full_name}'s Google+"
-      %li
-        .title linkdin:
-        .value= link_to "#{@user.profile.linkdin_url}", @user.profile.linkdin_url, target: "_blank", title: "#{@user.full_name}'s LinkdIn Profile"
-
-    %section.bio
-      %li
-        .title bio:
-        .value
-          :markdown
-            #{@user.profile.bio}
-
-    %section.stats
-      %li
-        .title courses:
-        .value Course List Here
-      %li
-        .title assigned:
-        .count COUNT
-        .ranking RANKING
-      %li
-        .title posts:
-        .count COUNT
-        .ranking RANKING
-      %li
-        .title images:
-        .count COUNT
-        .ranking RANKING
-      %li
-        .title videos:
-        .count COUNT
-        .ranking RANKING
+%section#user.content
+  %h1 User Feed Goes Here

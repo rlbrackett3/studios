@@ -11,10 +11,11 @@ class Ability
       can :read, :all
       can :update, [Profile]
       can :create, [User]
-    else
+    elsif user.role == "student"
       can :read, :all
       can :update, [Profile], user: user
-      # can :manage, [Sessions]
+    else
+      can :read, :all
     end
 
 

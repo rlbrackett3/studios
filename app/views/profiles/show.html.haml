@@ -1,6 +1,89 @@
-%p#notice= notice
+%section.page-title
+  .page-title-square
+  %h2.page-title-header
+    - if @user.full_name.size > 1
+      = "#{@profile.user.full_name}'s Profile"
+    - else
+      = "#{@profile.user.email}'s Profile"
+  .page-title-controls
+    - if @profile.user == current_user
+      = link_to "(edit)", edit_user_profile_path(@profile.user, @profile)
+    = link_to '(back)', user_path(@profile.user)
+
+%section#user-profile.content
+
+  %ul
+    %section.avatar
+      %li
+        .title avatar:
+        .value= image_tag(@profile.avatar.url(:large))
+
+    %section.basic-attr
+      %li
+        .title name:
+        .value= @profile.user.full_name
+      %li
+        .title email:
+        .value= @profile.user.email
+      %li
+        .title tel:
+        .value= @profile.tel
+      %li
+        .title school:
+        .value= @profile.school
+      %li
+        .title role:
+        .value= @profile.user.role
+
+    %section.sites
+      %li
+        .title website:
+        .value= link_to "#{@profile.website}", @profile.website, target: "_blank", title: "#{@profile.user.full_name || @profile.user.email}'s Personal Site"
+      %li
+        .title portfolio:
+        .value= link_to "#{@profile.portfolio}", @profile.portfolio, target: "_blank", title: "#{@profile.user.full_name || @profile.user.email}'s Portfolio Site"
+      %li
+        .title blog:
+        .value= link_to "#{@profile.blog}", @profile.blog, target: "_blank", title: "#{@profile.user.full_name || @profile.user.email}'s Blog"
+      %li
+        .title twitter:
+        .value= link_to "#{@profile.twitter_url}", @profile.twitter_url, target: "_blank", title: "#{@profile.user.full_name || @profile.user.email}'s Twitter"
+      %li
+        .title facebook:
+        .value= link_to "#{@profile.facebook_url}", @profile.facebook_url, target: "_blank", title: "#{@profile.user.full_name || @profile.user.email}'s Facebook"
+      %li
+        .title google+:
+        .value= link_to "#{@profile.google_url}", @profile.google_url, target: "_blank", title: "#{@profile.user.full_name || @profile.user.email}'s Google+"
+      %li
+        .title linkdin:
+        .value= link_to "#{@profile.linkdin_url}", @profile.linkdin_url, target: "_blank", title: "#{@profile.user.full_name || @profile.user.email}'s LinkdIn Profile"
+
+    %section.bio
+      %li
+        .title bio:
+        .value
+          :markdown
+            #{@profile.bio}
+
+    %section.stats
+      %li
+        .title courses:
+        .value Course List Here
+      %li
+        .title assigned:
+        .count COUNT
+        .ranking RANKING
+      %li
+        .title posts:
+        .count COUNT
+        .ranking RANKING
+      %li
+        .title images:
+        .count COUNT
+        .ranking RANKING
+      %li
+        .title videos:
+        .count COUNT
+        .ranking RANKING
 
 
-= link_to 'Edit', edit_user_profile_path(@profile)
-\|
-= link_to 'Back', users_path

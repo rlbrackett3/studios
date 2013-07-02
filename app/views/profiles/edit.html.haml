@@ -1,12 +1,11 @@
 %section.page-title
   .page-title-square
-  - if @user.full_name
-    %h2.page-title-header= "Editing #{@user.full_name}'s Profile"
+  - if @profile.user.full_name.size > 1
+    %h2.page-title-header= "Editing #{@profile.user.full_name}'s Profile"
   - else
-    %h2.page-title-header= "Editing #{@user.email}'s Profile"
+    %h2.page-title-header= "Editing #{@profile.user.email}'s Profile"
+  .page-title-controls
+    = link_to "(back)", user_path(@profile.user)
+    = link_to '(all users)', users_path
 
 = render 'form'
-
-= link_to "Show #{@user.full_name}'s Profile", user_path(@profile.user)
-\|
-= link_to 'All Users', users_path
