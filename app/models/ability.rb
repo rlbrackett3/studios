@@ -14,6 +14,7 @@ class Ability
     else
       can :read, :all
       can :update, [Profile], user: user
+      # can :manage, [Sessions]
     end
 
 

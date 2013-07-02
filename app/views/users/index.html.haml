@@ -9,3 +9,6 @@
         / insert user image here
         = image_tag("", size: "50x50")
         = link_to user.email, user_path(user), title: "Check out #{user.full_name}"
+
+  %section.invite
+    = link_to "Invite a new User", new_user_invitation_path

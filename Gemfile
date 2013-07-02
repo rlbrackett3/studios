@@ -50,6 +50,7 @@ group :development do
   gem 'rb-inotify'
   gem 'guard-minitest'
   gem 'guard-rails'
+  gem 'letter_opener'
 end
 
 group :development, :test do

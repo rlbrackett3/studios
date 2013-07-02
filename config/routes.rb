@@ -8,15 +8,11 @@ Studios::Application.routes.draw do
       put 'users' => 'devise/registrations#update', as: 'user_registration'
     end
 
-  resources :users do
-    resource :profile, :only => [:show, :edit, :update] do
-      resources :websites
-    end
+  resources :users, only: [:index, :show, :destroy] do
+    resource :profile, only: [:show, :edit, :update]
   end
 
-  resource :profile, :only => [:show, :edit, :update] do
-    resources :websites
-  end
+  resource :profile, only: [:show, :edit, :update]
 
   get "pages/index"
   # The priority is based upon order of creation: first created -> highest priority.
