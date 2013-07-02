@@ -1,13 +1,19 @@
-= simple_form_for [@user, @profile] do |f|
+= simple_form_for [@user, @profile], html: { multipart: true } do |f|
   - if @profile.errors.any?
     #error_explanation
       %h2= "#{pluralize(@profile.errors.count, "error")} prohibited this profile from being saved:"
       %ul
         - @profile.errors.full_messages.each do |msg|
           %li= msg
+
   %fieldset
-    = f.input :fname
-    = f.input :lname
+    = image_tag(@profile.avatar.url(:large))
+    = f.input :avatar, as: :file
+    = f.hidden_field :avatar_cache
+
+  %fieldset
+    = f.input :fname, label: "first name"
+    = f.input :lname, label: "last name"
     = f.input :tel, as: :tel
     = f.input :school
 
@@ -16,10 +22,10 @@
     = f.input :website,       as: :url
     = f.input :portfolio,     as: :url
     = f.input :blog,          as: :url
-    = f.input :twitter_url,   as: :url, label: "Twitter", hint: "http://www.twitter.com/YOUR_TWITTER_UNSERNAME"
-    = f.input :facebook_url,  as: :url, label: "Facebook"
-    = f.input :google_url,    as: :url, label: "Google+"
-    = f.input :linkdin_url,   as: :url, label: "LinkdIn"
+    = f.input :twitter_url,   as: :url, label: "twitter", hint: "http://www.twitter.com/YOUR_TWITTER_UNSERNAME"
+    = f.input :facebook_url,  as: :url, label: "facebook", hint: "http://www.facebook.com/YOUR_FACEBOOK_UNSERNAME"
+    = f.input :google_url,    as: :url, label: "google+", hint: "http://plus.google.com/YOUR_GOOGLE+_UNSERNAME"
+    = f.input :linkdin_url,   as: :url, label: "linkdin", hint: "http://www.linkdin.com/YOUR_LINKDIN_UNSERNAME"
 
   %fieldset
     = f.input :bio, as: :text

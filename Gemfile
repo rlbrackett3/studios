@@ -5,7 +5,10 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 
 gem "carrierwave"
-gem "carrierwave-mongoid", require: "carrierwave/mongoid"
+gem "carrierwave-mongoid", require: "carrierwave/mongoid"#, github: "carrierwaveuploader/carrierwave-mongoid"
+# gem "carrierwave-mongoid", "~> 0.6.0"
+gem "mini_magick"
+gem "fog", "~> 1.12.1"
 
 gem "decent_exposure"
 gem 'simple_form', '~> 3.0.0rc'

@@ -126,6 +126,13 @@ form {
     margin: 0 0 25px 0;
     padding: 0;
 
+    img {
+      @include span-columns(3, 6);
+      @include push(2);
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+
     .hint {
       @include span-columns(5 omega, 6);
       font-size: 11px;
@@ -146,9 +153,10 @@ form {
         @include span-columns(1, 6);
         text-align: right;
         margin-top: 7px;
+        text-transform: lowercase;
       }
 
-      input, textarea {
+      input, textarea, input[type='file'] {
         @include span-columns(4, 6);
         @include border-radius(0px);
         padding: 3px 5px;

@@ -4,7 +4,6 @@ describe Profile do
 
   before do
     DatabaseCleaner.start
-    # @user = Fabricate :user
     @profile = Fabricate :profile_with_user
   end
 
@@ -201,6 +200,14 @@ describe Profile do
   #################################
   ## Associations
   #################################
+
+  describe "Avatar" do
+
+    it "must respond to and Avatar uploader" do
+      @profile.must_respond_to :avatar
+    end
+
+  end
 
   describe "User Associations" do
     it "must respond to user" do

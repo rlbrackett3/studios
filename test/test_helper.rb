@@ -6,9 +6,11 @@ require File.expand_path("../../config/environment", __FILE__)
 
 require "rails/test_help"
 require "minitest/rails"
-require "minitest/autorun"
-require "minitest/rails/capybara"
+require "capybara/rails"
+# require "minitest/rails/capybara"
 require "minitest/pride"
+
+# require "minitest/autorun"
 
 require 'database_cleaner'
 
@@ -36,13 +38,8 @@ class ActiveSupport::TestCase
   DatabaseCleaner.strategy = :truncation
   DatabaseCleaner.orm = "mongoid"
 
-  before :each do
-    DatabaseCleaner.start
-  end
-
-  after :each do
-    DatabaseCleaner.clean
-  end
+  setup { DatabaseCleaner.start }
+  teardown { DatabaseCleaner.clean }
 
 end
 

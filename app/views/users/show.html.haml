@@ -12,7 +12,7 @@
     %section.avatar
       %li
         .title avatar:
-        .value= image_tag("avatar_large.png")
+        .value= image_tag(@user.profile.avatar.url(:large))
 
     %section.basic-attr
       %li

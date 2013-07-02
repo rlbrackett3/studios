@@ -19,6 +19,8 @@ class Profile
   field :google_url,      type: String
   field :linkdin_url,     type: String
 
+  mount_uploader :avatar, AvatarUploader
+
   # Associations
   embedded_in :user
   # embeds_many :websites
