@@ -13,7 +13,18 @@
           max-width: 150px;
         }
       }
-    }
+    }// avatar
+
+    section.bio {
+
+      li {
+
+        p {
+          margin-top: 0;
+          font-family: 'EB Garamond', serif;
+        }
+      }
+    }// bio
   }
 
 }

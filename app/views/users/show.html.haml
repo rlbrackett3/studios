@@ -34,30 +34,32 @@
     %section.sites
       %li
         .title website:
-        .value= link_to "#{@user.profile.website}", @user.profile.website, target: "_blank"
+        .value= link_to "#{@user.profile.website}", @user.profile.website, target: "_blank", title: "#{@user.full_name}'s Personal Site"
       %li
         .title portfolio:
-        .value= link_to "#{@user.profile.portfolio}", @user.profile.portfolio, target: "_blank"
+        .value= link_to "#{@user.profile.portfolio}", @user.profile.portfolio, target: "_blank", title: "#{@user.full_name}'s Portfolio Site"
       %li
         .title blog:
-        .value= link_to "#{@user.profile.blog}", @user.profile.blog, target: "_blank"
+        .value= link_to "#{@user.profile.blog}", @user.profile.blog, target: "_blank", title: "#{@user.full_name}'s Blog"
       %li
         .title twitter:
-        .value= link_to "#{@user.profile.twitter_url}", @user.profile.twitter_url, target: "_blank"
+        .value= link_to "#{@user.profile.twitter_url}", @user.profile.twitter_url, target: "_blank", title: "#{@user.full_name}'s Twitter"
       %li
         .title facebook:
-        .value= link_to "#{@user.profile.facebook_url}", @user.profile.facebook_url, target: "_blank"
+        .value= link_to "#{@user.profile.facebook_url}", @user.profile.facebook_url, target: "_blank", title: "#{@user.full_name}'s Facebook"
       %li
         .title google+:
-        .value= link_to "#{@user.profile.google_url}", @user.profile.google_url, target: "_blank"
+        .value= link_to "#{@user.profile.google_url}", @user.profile.google_url, target: "_blank", title: "#{@user.full_name}'s Google+"
       %li
         .title linkdin:
-        .value= link_to "#{@user.profile.linkdin_url}", @user.profile.linkdin_url, target: "_blank"
+        .value= link_to "#{@user.profile.linkdin_url}", @user.profile.linkdin_url, target: "_blank", title: "#{@user.full_name}'s LinkdIn Profile"
 
     %section.bio
       %li
         .title bio:
-        .value= @user.profile.bio
+        .value
+          :markdown
+            #{@user.profile.bio}
 
     %section.stats
       %li

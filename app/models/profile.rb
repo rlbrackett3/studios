@@ -1,11 +1,12 @@
 class Profile
   include Mongoid::Document
   include Mongoid::Timestamps
+  # include Mongoid::Markdown
 
   field :fname,           type: String#, default: ''
   field :lname,           type: String#, default: ''
 
-  field :bio,             type: String
+  field :bio,             type: String#, markdown: true
 
   field :tel,             type: Integer
   field :school,          type: String#, default: ''

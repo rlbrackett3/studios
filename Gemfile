@@ -16,6 +16,9 @@ gem 'cancan'
 gem 'nested_form'
 
 gem "mongoid", github: "mongoid/mongoid"
+# gem "mongoid-markdown"
+
+gem "redcarpet"
 
 # gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'devise', '~> 3.0.0.rc'
