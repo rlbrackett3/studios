@@ -17,7 +17,7 @@ Turn.config do |c|
   # :cue      - interactive testing
   c.format  = :outline
   # turn on invoke/execute tracing, enable full backtrace
-  c.trace = 3
+  c.trace = 5
   # use humanized test names (works only with :outline format)
   c.natural = true
   c.ansi = true

@@ -4,6 +4,8 @@ describe CoursesController do
 
   before do
     @course = Fabricate :course
+    @user = Fabricate :user, role: "instructor"
+    sign_in :user, @user
   end
 
   it "must get index" do
@@ -19,7 +21,7 @@ describe CoursesController do
 
   it "must create course" do
     assert_difference('Course.count') do
-      post :create, course: {  }
+      post :create, course: { title: @course.title, description: @course.description }
     end
 
     assert_redirected_to course_path(assigns(:course))
@@ -36,7 +38,7 @@ describe CoursesController do
   end
 
   it "must update course" do
-    put :update, id: @course, course: {  }
+    put :update, id: @course, course: { title: @course.title, description: @course.description }
     assert_redirected_to course_path(assigns(:course))
   end
 

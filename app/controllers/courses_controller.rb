@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource only: [:edit, :update, :new, :create, :destroy]
+  skip_authorization_check only: [:index, :show]
 
   # GET /courses
   # GET /courses.json
@@ -69,6 +71,7 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:title, :description, :term, :start_date, :end_date, :course_number, :published, :school)
+      params.require(:course).permit!
+      params.require(:course).permit(:title, :description, :school, :number, :term, :start_date, :end_date, :published, user_ids: [] )
     end
 end

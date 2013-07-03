@@ -1,7 +1,8 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update]
   before_filter :authenticate_user!
-  load_and_authorize_resource
+  load_and_authorize_resource only: [:edit, :update]
+  skip_authorization_check only: [:show]
 
   # GET /profiles/1
   # GET /profiles/1.json

@@ -128,5 +128,9 @@ describe Course do
       @course.users.must_include u
     end
 
+    it "must respond to user_ids" do
+      @course.must_respond_to :user_ids
+    end
+
   end
 end

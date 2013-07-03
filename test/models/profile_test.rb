@@ -215,4 +215,26 @@ describe Profile do
     end
   end
 
+  describe "UTILITIES" do
+
+    describe "course_count" do
+      it "must respond to course_count" do
+        @profile.must_respond_to :course_count
+      end
+
+      it "must count the users courses" do
+        u = @profile.user
+        u.courses << Fabricate(:course)
+        @profile.course_count.must_equal 1
+
+        u.courses << Fabricate(:course, title: "Numero 2")
+        @profile.course_count.must_equal 2
+
+        u.courses.delete_all
+        @profile.course_count.must_equal 0
+      end
+    end
+
+  end
+
 end

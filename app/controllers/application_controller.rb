@@ -4,6 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   check_authorization unless: :devise_controller?
 
+  # Hack to get CanCan working with strong params
+  before_filter do
+    resource = controller_path.singularize.gsub('/', '_').to_sym
+    method = "#{resource}_params"
+    params[resource] &&= send(method) if respond_to?(method, true)
+  end
+
   rescue_from CanCan::AccessDenied do |exception|
     if current_user.nil?
       session[:next] = request.fullpath

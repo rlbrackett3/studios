@@ -23,9 +23,6 @@ class Profile
 
   # Associations
   embedded_in :user
-  # embeds_many :websites
-
-  # accepts_nested_attributes_for :websites, allow_destroy: true
 
   # Validations
   validates :user,  presence: true
@@ -38,5 +35,11 @@ class Profile
   validates :website, :portfolio, :blog, :twitter_url, :facebook_url, :google_url, :linkdin_url,
                     format: URI::regexp(%w(http https)),
                     allow_blank: true
+
+  # Utilities
+
+  def course_count
+    self.user.courses.size
+  end
 
 end

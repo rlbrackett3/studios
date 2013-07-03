@@ -61,8 +61,6 @@ end
 
 group :development, :test do
   gem "fabrication"
-  # gem 'minitest-rails'
-  # gem "minitest-rails-capybara"
   gem 'database_cleaner'
 end
 

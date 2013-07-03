@@ -119,6 +119,10 @@ describe User do
       @user.must_respond_to :courses
     end
 
+    it "must respond to course_ids" do
+      @user.must_respond_to :course_ids
+    end
+
     it "must create a new course" do
       c = @user.courses.create title: "New Course"
       c.users.must_include @user
