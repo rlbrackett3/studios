@@ -1,5 +1,7 @@
 Studios::Application.routes.draw do
 
+  resources :courses
+
   get "users/index"
   get "users/show"
   devise_for :users, :skip => [:registrations]

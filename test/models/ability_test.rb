@@ -3,8 +3,6 @@ require "test_helper"
 describe Ability do
 
   before do
-    DatabaseCleaner.start
-
     @instructor = Fabricate(:user, role: "instructor")
     @assistant = Fabricate(:user, role: "assistant")
     @student = Fabricate(:user, role: "student")
@@ -12,10 +10,6 @@ describe Ability do
     @i_ability = Ability.new(@instructor)
     @a_ability = Ability.new(@assistant)
     @s_ability = Ability.new(@student)
-  end
-
-  after do
-    DatabaseCleaner.clean
   end
 
   describe "Instructor Role" do

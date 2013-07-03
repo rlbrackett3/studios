@@ -1,17 +1,3 @@
-# vim:set filetype=ruby:
-
-# guard 'spork', cucumber: false, rspec: false, test_unit: false, minitest: true do
-#   watch('config/application.rb')
-#   watch('config/environment.rb')
-#   watch('config/environments/test.rb')
-#   watch(%r{^config/initializers/.+\.rb$})
-#   watch('Gemfile.lock')
-#   watch('spec/spec_helper.rb') { :minitest }
-#   watch('test/test_helper.rb') { :minitest }
-#   watch(%r{features/support/}) { :cucumber }
-# end
-
-
 guard :minitest do
   # # with Minitest::Unit
   watch(%r{^test/(.*)\/?test_(.*)\.rb})
@@ -33,17 +19,6 @@ guard :minitest do
   watch(%r{^lib/(.+)\.rb})                               { |m| "test/lib/#{m[1]}_test.rb" }
 end
 
-# guard(
-  # "rspec",
-  # all_after_pass: false,
-  # cli: "--fail-fast --tty --format documentation --colour") do
-
-  # watch(%r{^spec/.+_spec\.rb$})
-  # watch(%r{^lib/(.+)\.rb$}) { |m| "spec/lib/#{m[1]}_spec.rb" }
-  # watch(%r{^app/(.+)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
-  # watch(%r{^app/views/(.+)/.*\.(erb|haml)$}) { |m| "spec/requests/#{m[1]}_spec.rb" }
-# end
-
 guard 'livereload' do
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{app/helpers/.+\.rb})
@@ -59,3 +34,9 @@ guard 'rails', server: :puma do
   watch(%r{^(config|lib)/.*})
 end
 
+
+guard 'bundler' do
+  watch('Gemfile')
+  # Uncomment next line if Gemfile contain `gemspec' command
+  # watch(/^.+\.gemspec/)
+end

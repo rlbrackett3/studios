@@ -1,6 +1,6 @@
 require "test_helper"
 
-describe UsersHelper do
+describe CoursesHelper do
 
   it "must be a real test" do
     skip

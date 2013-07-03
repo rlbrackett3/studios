@@ -55,15 +55,16 @@ class User
   ROLES = %w[instructor assistant student]
 
   # Associations
-  embeds_one :profile
-
+  embeds_one :profile, autobuild: true
   accepts_nested_attributes_for :profile, allow_destroy: true
+
+  has_and_belongs_to_many :courses
 
   # Callbacks
   after_create  :setup_profile
 
   # Validations
-  validate :role, presence: true
+  validates :role, presence: true
 
   def full_name
     [self.profile.fname, self.profile.lname].join(' ')

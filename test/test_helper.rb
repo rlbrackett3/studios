@@ -1,16 +1,9 @@
-require 'rubygems'
-
 ENV["RAILS_ENV"] ||= "test"
-
 require File.expand_path("../../config/environment", __FILE__)
-
 require "rails/test_help"
-require "minitest/rails"
-require "capybara/rails"
-# require "minitest/rails/capybara"
-require "minitest/pride"
 
-# require "minitest/autorun"
+# require 'mongoid'
+# require 'mongoid-minitest'
 
 require 'database_cleaner'
 
@@ -31,7 +24,20 @@ Turn.config do |c|
   c.verbose = true
 end
 
+# Unit
 class ActiveSupport::TestCase
+
+  # include Mongoid::Matchers
+
+  DatabaseCleaner.strategy = :truncation
+  DatabaseCleaner.orm = "mongoid"
+
+  setup { DatabaseCleaner.start }
+  teardown { DatabaseCleaner.clean }
+
+end
+
+class ActionController::TestCase
 
   include Devise::TestHelpers
 
@@ -43,36 +49,14 @@ class ActiveSupport::TestCase
 
 end
 
+class ActionView::TestCase
 
+end
 
-# Spork.prefork do
-#   require File.expand_path("../../config/environment", __FILE__)
-#   require "rails/test_help"
-#   require "minitest/rails"
+class ActionMailer::TestCase
 
-#   # To add Capybara feature tests add `gem "minitest-rails-capybara"`
-#   # to the test group in the Gemfile and uncomment the following:
-#   require "minitest/rails/capybara"
+end
 
-#   # Uncomment for awesome colorful output
-#   require "minitest/pride"
+class ActionDispatch::TestCase
 
-# end
-
-# Spork.each_run do
-#   # This code will be run each time you run your specs.
-#   require "minitest/autorun"
-
-#   include Devise::TestHelpers
-
-#   class ActiveSupport::TestCase
-#     # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
-#     # fixtures :all
-
-#     # Add more helper methods to be used by all tests here...
-#     #  before :each do
-#     #   Mongoid.purge!
-#     # end
-#   end
-
-# end
+end

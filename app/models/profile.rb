@@ -1,7 +1,6 @@
 class Profile
   include Mongoid::Document
   include Mongoid::Timestamps
-  # include Mongoid::Markdown
 
   field :fname,           type: String#, default: ''
   field :lname,           type: String#, default: ''

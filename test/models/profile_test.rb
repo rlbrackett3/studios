@@ -3,12 +3,7 @@ require "test_helper"
 describe Profile do
 
   before do
-    DatabaseCleaner.start
     @profile = Fabricate :profile_with_user
-  end
-
-  after do
-    DatabaseCleaner.clean
   end
 
   it "must be valid" do

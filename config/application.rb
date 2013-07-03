@@ -40,7 +40,7 @@ module Studios
     config.filter_parameters += [:password]
 
     config.generators do |g|
-      g.fixture_replacement :fabrication
+      g.fixture_replacement :fabrication, fabricator_path: 'test/fabricators'
       g.orm                 :mongoid
       g.test_framework      :mini_test, spec:true, fixture: false
       g.template_engine     :haml
