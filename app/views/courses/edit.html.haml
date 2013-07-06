@@ -1,7 +1,8 @@
-%h1 Editing course
+%section.page-title
+  .page-title-square
+  %h2.page-title-header= "Editing #{@course.title}"
+  .page-title-controls
+    = link_to '(show)', @course
+    = link_to '(back)', courses_path
 
 = render 'form'
-
-= link_to 'Show', @course
-\|
-= link_to 'Back', courses_path

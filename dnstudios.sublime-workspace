@@ -112,10 +112,13 @@
 	"buffers":
 	[
 		{
+			"contents": "",
 			"file": "test/controllers/courses_controller_test.rb",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 1124,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
@@ -131,7 +134,23 @@
 			"file": "app/controllers/courses_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2243,
+				"buffer_size": 2183,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/profiles_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1507,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/courses/_form.html.haml",
+			"settings":
+			{
+				"buffer_size": 651,
 				"line_ending": "Unix"
 			}
 		},
@@ -212,6 +231,11 @@
 	},
 	"file_history":
 	[
+		"/home/robert/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/robert/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
+		"/home/robert/.config/sublime-text-2/Packages/User/RubyTest.sublime-settings",
+		"/home/robert/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/application_controller.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/courses/show.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/courses/_form.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/courses/index.html.haml",
@@ -251,7 +275,6 @@
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/models/ability.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/devise/sessions/new.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/config/routes.rb",
-		"/home/robert/Dropbox/Sites/ruby2/studios/app/controllers/application_controller.rb",
 		"/home/robert/Dropbox/Sites/ruby2/studios/config/initializers/devise.rb",
 		"/home/robert/Dropbox/Sites/Locomotiveapps/dnblogs-editor/public/stylesheets/base.css.scss",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/uploaders/avatar_uploader_test.rb",
@@ -285,7 +308,6 @@
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/users/edit.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/app/views/profiles/new.html.haml",
 		"/home/robert/Dropbox/Sites/ruby2/studios/Gemfile",
-		"/home/robert/.config/sublime-text-2/Packages/User/RubyTest.sublime-settings",
 		"/home/robert/.config/sublime-text-2/Packages/RubyTest/RubyTest.sublime-settings",
 		"/home/robert/Dropbox/Sites/ruby2/studios/test/helpers/profiles_helper_test.rb",
 		"/home/robert/Dropbox/Sites/ruby2/sample-app/Gemfile",
@@ -336,10 +358,7 @@
 		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/pages/awards & publications.liquid.haml",
 		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/data/details.yml",
 		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/publications.yml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/exhibitions.yml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/public/javascripts/main.js.coffee",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/awards.yml",
-		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/views/snippets/about.liquid.haml"
+		"/home/robert/Dropbox/Sites/Locomotiveapps/unspace-editor/app/content_types/exhibitions.yml"
 	],
 	"find":
 	{
@@ -503,7 +522,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -511,15 +530,15 @@
 					"file": "test/controllers/courses_controller_test.rb",
 					"settings":
 					{
-						"buffer_size": 1124,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								517,
-								517
+								0,
+								0
 							]
 						],
 						"settings":
@@ -546,8 +565,8 @@
 						"selection":
 						[
 							[
-								500,
-								500
+								720,
+								720
 							]
 						],
 						"settings":
@@ -573,20 +592,76 @@
 					"file": "app/controllers/courses_controller.rb",
 					"settings":
 					{
-						"buffer_size": 2243,
+						"buffer_size": 2183,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1904,
-								1904
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/profiles_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/courses/_form.html.haml",
+					"settings":
+					{
+						"buffer_size": 651,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								651,
+								651
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haml/Syntaxes/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -603,7 +678,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "Gemfile",
 					"settings":
 					{
@@ -631,7 +706,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "test/test_helper.rb",
 					"settings":
 					{
@@ -642,8 +717,8 @@
 						"selection":
 						[
 							[
-								575,
-								575
+								647,
+								647
 							]
 						],
 						"settings":

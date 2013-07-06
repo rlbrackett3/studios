@@ -1,3 +1,32 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#courses.content {
+
+  ul#courses-list {
+    // @include span-columns(12, 12);
+    width: 100%;
+
+    li.course {
+      // @include span-columns(6, 12);
+      // @include nth-omega(2n);
+      @include isolate-grid(6);
+      max-height: 260px;
+
+      //dev
+      background-color: $gray;
+      height: 200px;
+
+      h3 {
+        clear:none;
+      }
+
+    }
+  }
+}// courses
+
+#course.content {
+  margin-top: 0;
+
+}// course

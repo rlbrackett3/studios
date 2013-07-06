@@ -1,33 +1,30 @@
-%h1 Listing courses
+%section.page-title
+  .page-title-square
+  %h2.page-title-header Courses
+  .page-title-controls
+    - if current_user
+      = link_to "(my courses)", user_courses_path(current_user)
+      - if current_user.role == "instructor"
+        = link_to '(new course)', new_course_path
 
-%table
-  %tr
-    %th Title
-    %th Description
-    %th Term
-    %th Start date
-    %th End date
-    %th Course number
-    %th Published
-    %th School
-    %th
-    %th
-    %th
+%section#courses.content
+  %ul#courses-list
+    - @courses.each do |course|
+      - if course.published
+        %li.course
+          %h3.course-title
+            = link_to course.title, course_path(course), title: course.description
+          .course-info
+            = course.school
+            = course.number
+          .course-dates
+            = course.term
+            = course.start_date
+            = course.end_date
+          - if current_user.role == "instructor"
+            .course-controls
+              = link_to 'Edit', edit_user_course_path(current_user, course)
+              = link_to 'Destroy', course, method: :delete, data: { :confirm => 'Are you sure?' }
 
-  - @courses.each do |course|
-    %tr
-      %td= course.title
-      %td= course.description
-      %td= course.term
-      %td= course.start_date
-      %td= course.end_date
-      %td= course.number
-      %td= course.published
-      %td= course.school
-      %td= link_to 'Show', course
-      %td= link_to 'Edit', edit_course_path(course)
-      %td= link_to 'Destroy', course, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
 
-= link_to 'New Course', new_course_path

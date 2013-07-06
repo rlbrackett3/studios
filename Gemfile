@@ -37,6 +37,7 @@ gem 'puma'
 gem 'foreman'
 
 gem 'figaro'
+gem 'ffaker'
 
 group :development do
   gem 'better_errors'

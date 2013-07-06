@@ -1,9 +1,7 @@
 Studios::Application.routes.draw do
 
-  resources :courses
-
-  get "users/index"
-  get "users/show"
+  # get "users/index"
+  # get "users/show"
   devise_for :users, :skip => [:registrations]
     as :user do
       get 'users/edit' => 'devise/registrations#edit', as: 'edit_user_registration'
@@ -12,9 +10,12 @@ Studios::Application.routes.draw do
 
   resources :users, only: [:index, :show, :destroy] do
     resource :profile, only: [:show, :edit, :update]
+    resources :courses
   end
 
   resource :profile, only: [:show, :edit, :update]
+
+  resources :courses
 
   get "pages/index"
   # The priority is based upon order of creation: first created -> highest priority.

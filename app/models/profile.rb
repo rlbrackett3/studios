@@ -7,7 +7,7 @@ class Profile
 
   field :bio,             type: String#, markdown: true
 
-  field :tel,             type: Integer
+  field :tel,             type: String
   field :school,          type: String#, default: ''
 
   field :website,         type: String

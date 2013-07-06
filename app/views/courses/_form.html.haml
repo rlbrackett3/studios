@@ -8,11 +8,13 @@
   %fieldset
     = f.input :title
     = f.input :description, as: :text
-    = f.input :term
-    = f.input :start_date#, as: :date
-    = f.input :end_date#, as: :date
-    = f.input :number
-    = f.input :published,   as: :boolean
     = f.input :school
+    = f.input :number
+    = f.input :term
+    = f.input :start_date, hint: "format: dd-mm-yyyy"
+    = f.input :end_date, hint: "format: dd-mm-yyyy"
+    .input
+      = f.label :published, label: 'Published'
+      = f.input_field :published, as: :boolean
   .actions
     = f.button :submit, 'Save'

@@ -107,6 +107,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     fabrication (2.7.2)
+    ffaker (1.16.1)
     ffi (1.9.0)
     figaro (0.7.0)
       bundler (~> 1.0)
@@ -312,6 +313,7 @@ DEPENDENCIES
   devise (~> 3.0.0.rc)
   devise_invitable!
   fabrication
+  ffaker
   figaro
   fog (~> 1.12.1)
   foreman
