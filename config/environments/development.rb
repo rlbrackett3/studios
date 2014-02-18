@@ -25,8 +25,8 @@ Studios::Application.configure do
   #   address:              "smtp.gmail.com",
   #   port:                  587,
   #   domain:               'gmail.com',
-  #   user_name:            'digital.nouveau@gmail.com',
-  #   password:             'Acc3ss!@',
+  #   user_name:            '',
+  #   password:             '',
   #   authentication:       'plain',
   #   enable_starttls_auto: true  }
 
